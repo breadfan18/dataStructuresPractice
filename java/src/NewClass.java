@@ -18,11 +18,14 @@ public class NewClass {
 //        }
 
         int[] selectionSort = {9, 2, 8, 12, 7};
+
+        int minIndex;
         for (int i = 0; i < selectionSort.length; i++) {
 
         }
-
     }
+
+}
 
 
 }
