@@ -17,15 +17,30 @@ public class NewClass {
 //            }
 //        }
 
-        int[] selectionSort = {9, 2, 8, 12, 7};
+        int[] a = {2, 7, 4, 1, 5, 3};
 
+        selectionSort(a, 6);
+
+        for (int i = 0; i < 6; i++) {
+            System.out.println(a[i]);
+        }
+
+    }
+
+    public static void selectionSort(int[] array, int n) {
         int minIndex;
-        for (int i = 0; i < selectionSort.length; i++) {
+        for (int i = 0; i < n - 1; i++) {
+            minIndex = i;
+            for (int j = i+1; j < n; j++) {
+                if (array[j] < array[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            int temp = array[minIndex];
+            array[minIndex] = array[i];
+            array[i] = temp;
 
         }
     }
-
 }
 
-
-}
