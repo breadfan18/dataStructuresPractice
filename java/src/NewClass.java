@@ -17,15 +17,38 @@ public class NewClass {
 //            }
 //        }
 
-        int[] a = {2, 7, 4, 1, 5, 3};
+        int[] a = {7, 2, 4, 1, 5, 3};
 
-        selectionSort(a, 6);
-
-        for (int i = 0; i < 6; i++) {
-            System.out.println(a[i]);
-        }
+        insertionSort(a);
 
     }
+
+
+    public static int[] insertionSort(int[] list) {
+        int j, element, temp;
+
+        for (int i = 1; i < list.length; i++) {
+            element = list[i]; //2
+            j = i-1; //0
+            //list[j] =
+
+
+            while (j >=0 && element < list[j]) {
+                temp = list[j];
+                list[j] = list[j+1];
+                list[j+1] = temp;
+                j--;
+            }
+        }
+
+        for (int i = 0; i < list.length; i++) {
+            System.out.println(list[i]);
+        }
+
+        return list;
+    }
+
+
 
     public static void selectionSort(int[] array, int n) {
         int minIndex;
@@ -40,7 +63,10 @@ public class NewClass {
             array[minIndex] = array[i];
             array[i] = temp;
 
+            System.out.println(temp);
         }
     }
+
 }
+
 
