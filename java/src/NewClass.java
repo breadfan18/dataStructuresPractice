@@ -30,8 +30,6 @@ public class NewClass {
         for (int i = 1; i < list.length; i++) {
             element = list[i]; //2
             j = i-1; //0
-            //list[j] =
-
 
             while (j >=0 && element < list[j]) {
                 temp = list[j];
