@@ -73,7 +73,7 @@ public class NewClass {
         int midIndex =  array.length/2;
         int desiredNumberIndex;
 
-        
+        return 0;
     }
 
 }
