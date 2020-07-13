@@ -21,6 +21,10 @@ public class NewClass {
 
         insertionSort(a);
 
+
+
+
+
     }
 
 
@@ -63,6 +67,13 @@ public class NewClass {
 
             System.out.println(temp);
         }
+    }
+
+    public static int findNumberInOrderedArray(int[] array, int number) {
+        int midIndex =  array.length/2;
+        int desiredNumberIndex;
+
+        
     }
 
 }
