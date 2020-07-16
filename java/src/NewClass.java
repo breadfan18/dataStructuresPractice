@@ -21,10 +21,6 @@ public class NewClass {
 
         insertionSort(a);
 
-
-
-
-
     }
 
 
@@ -66,6 +62,8 @@ public class NewClass {
             array[i] = temp;
 
             System.out.println(temp);
+
+
         }
     }
 
