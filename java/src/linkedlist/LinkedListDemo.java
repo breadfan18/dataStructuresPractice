@@ -1,22 +1,44 @@
 package linkedlist;
 
+import java.util.LinkedList;
+import java.util.ListIterator;
+
 public class LinkedListDemo {
 
     public static void main(String[] args) {
-        LinkedList list = new LinkedList();
+//        LinkedList list = new LinkedList();
+//
+//        list.insertAtHead(5);
+//        list.insertAtHead(10);
+//        list.insertAtHead(2);
+//        list.insertAtHead(12);
+//        list.insertAtHead(19);
+//        list.insertAtHead(20);
+//
+//
+//        list.deleteHead();
+//
+//        System.out.println(list);
+//        System.out.println(list.length());
 
-        list.insertAtHead(5);
-        list.insertAtHead(10);
-        list.insertAtHead(2);
-        list.insertAtHead(12);
-        list.insertAtHead(19);
-        list.insertAtHead(20);
+        LinkedList<String> states = new LinkedList();
+        states.add("Alaska");
+        states.add("Arizona");
+        states.add("Arkansas");
+        states.add("Pennsylvania");
+        states.add("California");
+        states.add("Colorado");
+        states.add("Connecticut");
 
+        states.addFirst("Alabama");
+        System.out.println(states);
 
-        list.deleteHead();
+        System.out.println("Last State: " + states.getLast());
 
-        System.out.println(list);
-        System.out.println(list.length());
+        ListIterator iterator = states.listIterator(states.size());
+        while (iterator.hasPrevious()) {
+            System.out.println(iterator.previous());
+        }
 
     }
 }

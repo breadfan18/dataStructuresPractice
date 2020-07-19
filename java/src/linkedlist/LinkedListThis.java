@@ -1,6 +1,6 @@
 package linkedlist;
 
-public class LinkedList {
+public class LinkedListThis {
 
     private Node head;
 
