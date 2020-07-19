@@ -11,6 +11,21 @@ public class LinkedList {
 
     }
 
+    public int length() {
+       int length = 0;
+       Node current = this.head;
+
+        while (current !=null) {
+            length++;
+            current = current.getNextNode();
+        }
+        return length;
+    }
+
+    public void deleteHead() {
+        this.head = this.head.getNextNode();
+    }
+
     @Override
     public String toString() {
         String result = "{";

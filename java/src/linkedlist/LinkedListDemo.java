@@ -12,7 +12,11 @@ public class LinkedListDemo {
         list.insertAtHead(19);
         list.insertAtHead(20);
 
+
+        list.deleteHead();
+
         System.out.println(list);
+        System.out.println(list.length());
 
     }
 }
