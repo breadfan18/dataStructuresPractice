@@ -6,20 +6,24 @@ import java.util.ListIterator;
 public class LinkedListDemo {
 
     public static void main(String[] args) {
-//        LinkedList list = new LinkedList();
-//
-//        list.insertAtHead(5);
-//        list.insertAtHead(10);
-//        list.insertAtHead(2);
-//        list.insertAtHead(12);
-//        list.insertAtHead(19);
-//        list.insertAtHead(20);
-//
-//
-//        list.deleteHead();
-//
-//        System.out.println(list);
-//        System.out.println(list.length());
+        LinkedListThis list = new LinkedListThis();
+
+        list.insertAtHead(5);
+        list.insertAtHead(10);
+        list.insertAtHead(2);
+        list.insertAtHead(12);
+        list.insertAtHead(19);
+        list.insertAtHead(20);
+
+
+        list.deleteHead();
+
+
+
+        System.out.println(list);
+        System.out.println(list.length());
+
+        System.out.println("Found: " + list.find(19));
 
         LinkedList<String> states = new LinkedList();
         states.add("Alaska");
@@ -29,6 +33,7 @@ public class LinkedListDemo {
         states.add("California");
         states.add("Colorado");
         states.add("Connecticut");
+
 
         states.addFirst("Alabama");
         System.out.println(states);
