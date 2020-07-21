@@ -7,7 +7,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Stack;
 
-public class Challenge {
+public class Challenge extends SimpleProblems{
 
     public static void main(String[] args) {
 //        List<String> groceries = new ArrayList();
@@ -37,14 +37,17 @@ public class Challenge {
 //
 //        System.out.println(groceries);
 
-        Stack myStack = new Stack();
-        myStack.push("First");
-        myStack.push("Second");
-        myStack.push("Third");
-        myStack.push("Fourth");
-        myStack.push("Fifth");
 
-        System.out.println(myStack.pop());
+
+
+        int[] array = {12, 5, 6, 9, 18, 20};
+
+//        reverseStringWithStringBuilder();
+
+        reverseString();
+
+//        insertionSort(array);
+
 
 
     }
