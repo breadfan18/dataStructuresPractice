@@ -2,7 +2,7 @@ package linkedlist;
 
 public class SimpleProblems {
 
-    public static void reverseStringWithStringBuilder(){
+    public static void reverseStringWithStringBuilderLoop(){
         String name = "swarooop";
 
         StringBuilder sb = new StringBuilder();
@@ -12,6 +12,14 @@ public class SimpleProblems {
         }
 
         String  newName  = sb.toString();
+        System.out.println(newName);
+    }
+
+    public static void reverseWithStringBuilderMethod(){
+        String name = "swarooop";
+
+        StringBuilder sb = new StringBuilder(name);
+        String  newName  = sb.reverse().toString();
         System.out.println(newName);
     }
 
@@ -27,9 +35,6 @@ public class SimpleProblems {
 
         System.out.println(reversed);
     }
-
-
-
 
 
     public static void selectionSort(int[]array, int n) {

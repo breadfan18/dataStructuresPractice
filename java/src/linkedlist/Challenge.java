@@ -44,10 +44,13 @@ public class Challenge extends SimpleProblems{
 
 //        reverseStringWithStringBuilder();
 
-        reverseString();
+//        reverseString();
+
+//        reverseWithStringBuilderMethod();
 
 //        insertionSort(array);
 
+        selectionSort(array,  10);
 
 
     }
