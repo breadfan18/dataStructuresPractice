@@ -1,11 +1,13 @@
 package linkedlist;
 
-import oracle.jvm.hotspot.jfr.JFROptions;
+import linkedlist.myEmployees.Deepika;
+import linkedlist.myEmployees.Gio;
+import linkedlist.myEmployees.Kranthi;
+import linkedlist.myEmployees.Latika;
 
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Arrays;
 import java.util.List;
-import java.util.Stack;
 
 public class Challenge extends SimpleProblems{
 
@@ -40,17 +42,24 @@ public class Challenge extends SimpleProblems{
 
 
 
-        int[] array = {12, 5, 6, 9, 18, 20};
+        int[] array = {9, 2, 8, 12, 7};
 
-//        reverseStringWithStringBuilder();
-
+//        reverseStringWithStringBuilderLoop();
+//
 //        reverseString();
-
+//
 //        reverseWithStringBuilderMethod();
-
+//
 //        insertionSort(array);
+//
+        selectionSort(10);
+//
+//        palindrome("NeveroddorEVen");
+//
+//        addObjectsIntoArrayList();
+//
+//        exampleForInheritance();
 
-        selectionSort(array,  10);
 
 
     }
