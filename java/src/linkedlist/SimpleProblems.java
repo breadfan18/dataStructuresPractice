@@ -5,8 +5,10 @@ import linkedlist.myEmployees.Gio;
 import linkedlist.myEmployees.Kranthi;
 import linkedlist.myEmployees.Latika;
 
+import java.lang.reflect.Array;
 import java.sql.ClientInfoStatus;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class SimpleProblems {
@@ -132,5 +134,29 @@ public class SimpleProblems {
         for (Employees employee: myEmps) {
             System.out.println(employee.getName() + " | " + employee.getAge() + " | " + employee.getPosition() + " | " + employee.getSalary());
         }
+    }
+
+    public static void exceptionsOutOfString(){
+        String input = "org.hibernate.exception.SQLException: error executing work org.hibernate.exception.SQLGrammarException: error \n" +
+                "executing work &nbsp;&nbsp;&nbsp;&nbsp;at  ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final] &nbsp;&nbsp;&nbsp;&nbsp;\n" +
+                "\\norg.hibernate.exception.SQLGrammarException: error executing work &nbsp;&nbsp;&nbsp;&nbsp;at  ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final] \n" +
+                "&nbsp;&nbsp;&nbsp;&nbsp; Caused by: java.sql.SQLSyntaxErrorException: malformed string: 'Acme''&nbsp;&nbsp;&nbsp;&nbsp;at";
+
+        String regex = ".[a-zA-Z]*Exception";
+
+        String[] exceptions  = input.split(regex);
+
+
+
+        System.out.println(exceptions);
+
+        int index = 0;
+        for (String e : exceptions) {
+
+
+        }
+
+
+
     }
 }

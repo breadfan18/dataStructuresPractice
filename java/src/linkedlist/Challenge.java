@@ -11,6 +11,7 @@ import java.util.List;
 
 public class Challenge extends SimpleProblems{
 
+
     public static void main(String[] args) {
 //        List<String> groceries = new ArrayList();
 //
@@ -42,8 +43,11 @@ public class Challenge extends SimpleProblems{
 
 
 
-        int[] array = {9, 2, 8, 12, 7};
 
+
+
+//        int[] array = {9, 2, 8, 12, 7};
+//
 //        reverseStringWithStringBuilderLoop();
 //
 //        reverseString();
@@ -52,7 +56,7 @@ public class Challenge extends SimpleProblems{
 //
 //        insertionSort(array);
 //
-        selectionSort(10);
+//        selectionSort(10);
 //
 //        palindrome("NeveroddorEVen");
 //
@@ -60,7 +64,7 @@ public class Challenge extends SimpleProblems{
 //
 //        exampleForInheritance();
 
-
+        exceptionsOutOfString();
 
     }
 
