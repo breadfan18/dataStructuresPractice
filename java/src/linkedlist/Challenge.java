@@ -56,7 +56,7 @@ public class Challenge extends SimpleProblems{
 //
 //        insertionSort(array);
 //
-//        selectionSort(10);
+        selectionSort(6);
 //
 //        palindrome("NeveroddorEVen");
 //
@@ -64,7 +64,7 @@ public class Challenge extends SimpleProblems{
 //
 //        exampleForInheritance();
 
-        exceptionsOutOfString();
+//        exceptionsOutOfString();
 
     }
 

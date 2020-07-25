@@ -10,6 +10,8 @@ import java.sql.ClientInfoStatus;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class SimpleProblems {
 
@@ -63,15 +65,15 @@ public class SimpleProblems {
 
         //Time Complexity - Big  O of O(n^2)
         //Pretty complex,  so useful only for small data sets
-        int[] array = {9, 2, 8, 99, 21, 33, 12, 69, 7, 1};
+        int[] array = {9, 2, 8, 69, 7, 1};
 
         int minValueIndex;
         for (int i = 0; i <= n-1; i++) {
-            minValueIndex = i; // minIndex 0  ; minValue = 9
+            minValueIndex = i;
 
             for (int j = i+1; j < n; j++) {
-                if (array[j] < array[minValueIndex]) { //is 2 < 9 ?
-                    minValueIndex = j; //minIndex is now  1 (i + 1 = 0 + 1)
+                if (array[j] < array[minValueIndex]) {
+                    minValueIndex = j;
                 }
             }
             int temp = array[minValueIndex];
@@ -144,19 +146,26 @@ public class SimpleProblems {
 
         String regex = ".[a-zA-Z]*Exception";
 
-        String[] exceptions  = input.split(regex);
+//        String regex = "\\w+Exception";
+        Matcher m = Pattern.compile(regex).matcher(input);
 
-
-
-        System.out.println(exceptions);
-
-        int index = 0;
-        for (String e : exceptions) {
-
-
+        while (m.find()) {
+            System.out.println(m.group());
         }
 
 
 
+
+
     }
+
+    public boolean validateIP(String ip) {
+
+
+
+
+        return true;
+    }
+
+
 }
