@@ -1,18 +1,25 @@
 package chapter1;
 
+import java.util.Scanner;
+
 public class Runner {
 
     public static void main(String[] args) {
 
-        String testStrng = "Swaroop";
-        String reversed = "";
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        int y = sc.nextInt();
 
-        for (int i = testStrng.length()-1; i >= 0; i--) {
-            reversed = reversed + testStrng.charAt(i);
+        int temp;
 
-        }
+        System.out.println("Before Swapping: " + "X = " + x + " and" + " Y = " + y);
 
-        System.out.println(reversed);
+        System.out.println("--------------------------------------------");
+        temp = x;
+        x = y;
+        y = temp;
+
+        System.out.println("After Swapping: " + "X = " + x + " and " + " Y = " + y);
 
     }
 }
