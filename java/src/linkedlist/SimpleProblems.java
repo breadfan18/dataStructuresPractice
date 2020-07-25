@@ -144,14 +144,23 @@ public class SimpleProblems {
                 "\\norg.hibernate.exception.SQLGrammarException: error executing work &nbsp;&nbsp;&nbsp;&nbsp;at  ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final] \n" +
                 "&nbsp;&nbsp;&nbsp;&nbsp; Caused by: java.sql.SQLSyntaxErrorException: malformed string: 'Acme''&nbsp;&nbsp;&nbsp;&nbsp;at";
 
-        String regex = ".[a-zA-Z]*Exception";
+        String regex = "[a-zA-Z]*Exception";
 
-//        String regex = "\\w+Exception";
         Matcher m = Pattern.compile(regex).matcher(input);
 
-        while (m.find()) {
-            System.out.println(m.group());
-        }
+
+
+
+
+
+//        String regex = "\\w+Exception";
+//        Matcher m = Pattern.compile(regex).matcher(input);
+//
+//        while (m.find()) {
+//            System.out.println(m.group());
+//        }
+
+
 
 
 
