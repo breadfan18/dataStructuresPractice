@@ -5,21 +5,17 @@ import java.util.Scanner;
 public class Runner {
 
     public static void main(String[] args) {
+        String str = "x";
 
-        Scanner sc = new Scanner(System.in);
-        int x = sc.nextInt();
-        int y = sc.nextInt();
 
-        int temp;
+            if (str.length() >=3 && str.substring(0, 3).equals("not")) {
+                System.out.println(str);
+            } else {
+                System.out.println("not " + str);
+            }
 
-        System.out.println("Before Swapping: " + "X = " + x + " and" + " Y = " + y);
+        }
 
-        System.out.println("--------------------------------------------");
-        temp = x;
-        x = y;
-        y = temp;
 
-        System.out.println("After Swapping: " + "X = " + x + " and " + " Y = " + y);
 
-    }
 }

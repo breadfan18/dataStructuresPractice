@@ -1,15 +1,16 @@
 package linkedlist;
 
+import com.sun.xml.internal.ws.addressing.WsaTubeHelperImpl;
 import linkedlist.myEmployees.Deepika;
 import linkedlist.myEmployees.Gio;
 import linkedlist.myEmployees.Kranthi;
 import linkedlist.myEmployees.Latika;
+import netscape.javascript.JSUtil;
 
+import javax.print.attribute.standard.Finishings;
 import java.lang.reflect.Array;
 import java.sql.ClientInfoStatus;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -138,35 +139,55 @@ public class SimpleProblems {
         }
     }
 
+    public void numberSwap(){
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        int y = sc.nextInt();
+
+        int temp;
+
+        System.out.println("Before Swapping: " + "X = " + x + " and" + " Y = " + y);
+
+        System.out.println("--------------------------------------------");
+        int total = x + y;
+        y = total - y;
+        x = total - x;
+
+        System.out.println("After Swapping: " + "X = " + x + " and " + " Y = " + y);
+    }
+
+
     public static void exceptionsOutOfString(){
         String input = "org.hibernate.exception.SQLException: error executing work org.hibernate.exception.SQLGrammarException: error \n" +
                 "executing work &nbsp;&nbsp;&nbsp;&nbsp;at  ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final] &nbsp;&nbsp;&nbsp;&nbsp;\n" +
                 "\\norg.hibernate.exception.SQLGrammarException: error executing work &nbsp;&nbsp;&nbsp;&nbsp;at  ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final] \n" +
-                "&nbsp;&nbsp;&nbsp;&nbsp; Caused by: java.sql.SQLSyntaxErrorException: malformed string: 'Acme''&nbsp;&nbsp;&nbsp;&nbsp;at";
+                "&nbsp;&nbsp;&nbsp;&nbsp; Caused by: java.sql.SQLSyntaxErrorException: malformed string: 'Acme''&nbsp;&nbsp;&nbsp;&nbsp;at.... SQLException";
 
         String regex = "[a-zA-Z]*Exception";
 
         Matcher m = Pattern.compile(regex).matcher(input);
 
+        List<String> exceptions = new ArrayList<>();
 
+        while (m.find()) {
+            exceptions.add(m.group());
+        }
+        System.out.println(exceptions);
 
+        HashMap<String, Integer> myHashmap = new HashMap<>();
 
+        for (int i = 0; i < exceptions.size(); i++) {
+            System.out.println(exceptions.get(i));
+            int occurrences = Collections.frequency(exceptions, exceptions.get(i));
+            myHashmap.put(exceptions.get(i), occurrences);
+        }
 
-
-//        String regex = "\\w+Exception";
-//        Matcher m = Pattern.compile(regex).matcher(input);
-//
-//        while (m.find()) {
-//            System.out.println(m.group());
-//        }
-
-
-
-
-
-
-
+        for (String s: myHashmap.keySet()) {
+            System.out.println(s + ": " + myHashmap.get(s));
+        }
     }
+
+
 
     public boolean validateIP(String ip) {
 
