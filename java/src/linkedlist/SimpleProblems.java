@@ -161,7 +161,7 @@ public class SimpleProblems {
         String input = "org.hibernate.exception.SQLException: error executing work org.hibernate.exception.SQLGrammarException: error \n" +
                 "executing work &nbsp;&nbsp;&nbsp;&nbsp;at  ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final] &nbsp;&nbsp;&nbsp;&nbsp;\n" +
                 "\\norg.hibernate.exception.SQLGrammarException: error executing work &nbsp;&nbsp;&nbsp;&nbsp;at  ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final] \n" +
-                "&nbsp;&nbsp;&nbsp;&nbsp; Caused by: java.sql.SQLSyntaxErrorException: malformed string: 'Acme''&nbsp;&nbsp;&nbsp;&nbsp;at.... SQLException";
+                "&nbsp;&nbsp;&nbsp;&nbsp; Caused by: java.sql.SQLSyntaxErrorException: malformed string: 'Acme''&nbsp;&nbsp;&nbsp;&nbsp;at.... SQLException /...SQLException";
 
         String regex = "[a-zA-Z]*Exception";
 
@@ -176,10 +176,20 @@ public class SimpleProblems {
 
         HashMap<String, Integer> myHashmap = new HashMap<>();
 
+//        for (int i = 0; i < exceptions.size(); i++) {
+//            System.out.println(exceptions.get(i));
+//            int occurrences = Collections.frequency(exceptions, exceptions.get(i));
+//            myHashmap.put(exceptions.get(i), occurrences);
+//        }
+
+        //count the occurrences of each  element of the array in the hashmap. If it's already there, we increment it by 1
         for (int i = 0; i < exceptions.size(); i++) {
-            System.out.println(exceptions.get(i));
-            int occurrences = Collections.frequency(exceptions, exceptions.get(i));
-            myHashmap.put(exceptions.get(i), occurrences);
+            String currentKey = exceptions.get(i);
+            if (myHashmap.containsKey(currentKey)) {
+                myHashmap.put(currentKey, myHashmap.get(currentKey) + 1);
+            } else {
+                myHashmap.put(currentKey, 1);
+            }
         }
 
         for (String s: myHashmap.keySet()) {
@@ -218,5 +228,13 @@ public class SimpleProblems {
         return true;
     }
 
+    public static boolean isItemInArray(String item, String[] itemArray) {
+        for (String i : itemArray) {
+            if (i.equalsIgnoreCase(item)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
 }

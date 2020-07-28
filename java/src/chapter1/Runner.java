@@ -27,10 +27,15 @@ public class Runner {
 
 
 
+    }
 
-
-
-
+    public static boolean isItemInArray(String item, String[] itemArray) {
+        for (String i : itemArray) {
+            if (i.equalsIgnoreCase(item)) {
+                return true;
+            }
+        }
+        return false;
     }
 
 

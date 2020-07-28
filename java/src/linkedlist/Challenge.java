@@ -64,7 +64,7 @@ public class Challenge extends SimpleProblems{
 
 //        exampleForInheritance();
 
-//        exceptionsOutOfString();
+        exceptionsOutOfString();
 
 //        vowelsOrConsonants("I aM a HaPpy mOuse");
 
