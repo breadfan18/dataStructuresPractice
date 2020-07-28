@@ -47,24 +47,29 @@ public class Challenge extends SimpleProblems{
 
 
 //        int[] array = {9, 2, 8, 12, 7};
-//
+
 //        reverseStringWithStringBuilderLoop();
-//
+
 //        reverseString();
-//
+
 //        reverseWithStringBuilderMethod();
-//
+
 //        insertionSort(array);
-//
+
 //        selectionSort(6);
-//
+
 //        palindrome("NeveroddorEVen");
-//
+
 //        addObjectsIntoArrayList();
-//
+
 //        exampleForInheritance();
 
-        exceptionsOutOfString();
+//        exceptionsOutOfString();
+
+//        vowelsOrConsonants("I aM a HaPpy mOuse");
+
+
+
 
     }
 

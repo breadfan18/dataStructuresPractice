@@ -1,21 +1,47 @@
 package chapter1;
 
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class Runner {
 
     public static void main(String[] args) {
-        String str = "x";
 
 
-            if (str.length() >=3 && str.substring(0, 3).equals("not")) {
-                System.out.println(str);
-            } else {
-                System.out.println("not " + str);
-            }
+        String[] availablePets = {"cats", "dogs", "fish"};
+        String[] unavailablePets = {"bird", "rabbit", "hamster", "gerbil"};
 
-        }
+        System.out.println(Arrays.toString(availablePets));
+        System.out.println(Arrays.toString(unavailablePets));
+
+        int indexOfAvailablePet = 2;
+        int indexOfUnavailablePet = 0;
+
+        String availablePet = availablePets[indexOfAvailablePet];
+        String unavailablePet = unavailablePets[indexOfUnavailablePet];
+
+        availablePets[indexOfAvailablePet] = unavailablePet;
+        unavailablePets[indexOfUnavailablePet] = availablePet;
+
+        System.out.println(Arrays.toString(availablePets));
+        System.out.println(Arrays.toString(unavailablePets));
+
+
+
+
+
+
+
+    }
 
 
 
 }
+
+
+
+
+
+
+
+
+

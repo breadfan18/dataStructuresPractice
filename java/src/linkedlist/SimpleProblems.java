@@ -187,11 +187,32 @@ public class SimpleProblems {
         }
     }
 
+    public static String vowelsOrConsonants(String s) {
+        String trimmed = s.trim().replaceAll(" ", "").toLowerCase();
+
+        int vowelsCount = 0;
+        int consonantsCount = 0;
+
+        char[] vowels = {'a', 'e', 'i', 'o', 'u', 'y'};
+
+        for (int i = 0; i < trimmed.length(); i++) {
+            for (int j = 0; j < vowels.length; j++) {
+                if (trimmed.charAt(i) == vowels[j]) {
+                    vowelsCount++;
+                }
+            }
+        }
+
+        consonantsCount = trimmed.length() - vowelsCount;
+
+        return "This sentence has " + vowelsCount + " vowels and " + consonantsCount + " consonants";
+    }
+
 
 
     public boolean validateIP(String ip) {
 
-
+        String ipRegex = "\\d+\\.\\d+\\.\\d+\\.\\d+";
 
 
         return true;
