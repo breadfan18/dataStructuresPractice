@@ -62,11 +62,13 @@ public class Challenge extends SimpleProblems{
 
 //        addObjectsIntoArrayList();
 
-//        exampleForInheritance();
+        exampleForInheritance();
 
         exceptionsOutOfString();
 
 //        vowelsOrConsonants("I aM a HaPpy mOuse");
+
+//        isItemInArray()
 
 
 

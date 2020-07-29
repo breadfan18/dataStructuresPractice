@@ -161,7 +161,7 @@ public class SimpleProblems {
         String input = "org.hibernate.exception.SQLException: error executing work org.hibernate.exception.SQLGrammarException: error \n" +
                 "executing work &nbsp;&nbsp;&nbsp;&nbsp;at  ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final] &nbsp;&nbsp;&nbsp;&nbsp;\n" +
                 "\\norg.hibernate.exception.SQLGrammarException: error executing work &nbsp;&nbsp;&nbsp;&nbsp;at  ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final] \n" +
-                "&nbsp;&nbsp;&nbsp;&nbsp; Caused by: java.sql.SQLSyntaxErrorException: malformed string: 'Acme''&nbsp;&nbsp;&nbsp;&nbsp;at.... SQLException /...SQLException";
+                "&nbsp;&nbsp;&nbsp;&nbsp; Caused by: java.sql.SQLSyntaxErrorException: malformed string: 'Acme''&nbsp;&nbsp;&nbsp;&nbsp;at.... SQLException /...SQLException...NullPointerException";
 
         String regex = "[a-zA-Z]*Exception";
 
@@ -236,5 +236,8 @@ public class SimpleProblems {
         }
         return false;
     }
+
+
+
 
 }

@@ -41,7 +41,8 @@ public class HashMapPractice {
     }
 
     public static void whichCharacterMostRepeated() {
-        String s = "phonebookh";
+        String s1 = "hello kitty my kitty my kitty kat";
+        String s = s1.toLowerCase().trim().replaceAll(" ", "");
         HashMap<Character, Integer> hashMap = new HashMap<>();
         for (int i = 0; i < s.length(); i++) {
             Character currentKey = s.charAt(i);
@@ -55,6 +56,20 @@ public class HashMapPractice {
         for (Character c : hashMap.keySet()) {
             System.out.println("Key: " + c  + " | " + "Value: " + hashMap.get(c));
         }
+
+        int  max = 0;
+        Character mostRepeated = ' ';
+        for (Character key : hashMap.keySet()) {
+            int currentValue = hashMap.get(key);
+            if (currentValue >  max){
+                max = currentValue;
+                mostRepeated = key;
+            }
+        }
+
+        System.out.println("Most repeated char is: \"" + mostRepeated  + "\". It is repeated "  + max  + " times");
     }
+
+
 
 }
