@@ -1,4 +1,4 @@
-package linkedlist;
+package abstracts.employees;
 
 public class Employees {
 

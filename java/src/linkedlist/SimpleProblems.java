@@ -1,15 +1,11 @@
 package linkedlist;
 
-import com.sun.xml.internal.ws.addressing.WsaTubeHelperImpl;
-import linkedlist.myEmployees.Deepika;
-import linkedlist.myEmployees.Gio;
-import linkedlist.myEmployees.Kranthi;
-import linkedlist.myEmployees.Latika;
-import netscape.javascript.JSUtil;
+import abstracts.employees.*;
+import abstracts.employees.myEmployees.Deepika;
+import abstracts.employees.myEmployees.Gio;
+import abstracts.employees.myEmployees.Kranthi;
+import abstracts.employees.myEmployees.Latika;
 
-import javax.print.attribute.standard.Finishings;
-import java.lang.reflect.Array;
-import java.sql.ClientInfoStatus;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

@@ -1,14 +1,5 @@
 package linkedlist;
 
-import linkedlist.myEmployees.Deepika;
-import linkedlist.myEmployees.Gio;
-import linkedlist.myEmployees.Kranthi;
-import linkedlist.myEmployees.Latika;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class Challenge extends SimpleProblems{
 
 

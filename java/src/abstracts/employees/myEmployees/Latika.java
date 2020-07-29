@@ -1,6 +1,6 @@
-package linkedlist.myEmployees;
+package abstracts.employees.myEmployees;
 
-import linkedlist.Employees;
+import abstracts.employees.Employees;
 
 public class Latika extends Employees {
 
