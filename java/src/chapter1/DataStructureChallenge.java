@@ -1,5 +1,6 @@
 package chapter1;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class DataStructureChallenge {
@@ -67,10 +68,9 @@ public class DataStructureChallenge {
 
     public static void mostRepeatedWordsInString(String input) {
         String[] words = input.trim().toLowerCase().replaceAll("[^a-zA-Z ]", "").split(" ");
+        System.out.println(Arrays.toString(words));
 
-        for (String word : words) {
-            System.out.println(word);
-        }
+
         HashMap<String, Integer> wordsMap = new HashMap<>();
 
         for (String key : words) {
@@ -91,6 +91,7 @@ public class DataStructureChallenge {
                 mostRepeatedWord = key;
             }
         }
+
 
         System.out.println("Most Repeated word is \""  + mostRepeatedWord + "\". It is repeated "  + max + " times.");
 
