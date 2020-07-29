@@ -120,20 +120,6 @@ public class SimpleProblems {
         System.out.println(myObj[1]);
     }
 
-    public static void exampleForInheritance() {
-        List<Employees> myEmps = new ArrayList<>();
-
-        myEmps.add(new Gio());
-        myEmps.add(new Deepika());
-        myEmps.add(new Kranthi());
-        myEmps.add(new Latika());
-
-        Employees myCurrentEmp = myEmps.get(2);
-
-        for (Employees employee: myEmps) {
-            System.out.println(employee.getName() + " | " + employee.getAge() + " | " + employee.getPosition() + " | " + employee.getSalary());
-        }
-    }
 
     public void numberSwap(){
         Scanner sc = new Scanner(System.in);

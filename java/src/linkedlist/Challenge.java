@@ -53,7 +53,6 @@ public class Challenge extends SimpleProblems{
 
 //        addObjectsIntoArrayList();
 
-        exampleForInheritance();
 
         exceptionsOutOfString();
 
