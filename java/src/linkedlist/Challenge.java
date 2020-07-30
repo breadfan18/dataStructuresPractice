@@ -37,35 +37,48 @@ public class Challenge extends SimpleProblems{
 
 
 
-//        int[] array = {9, 2, 8, 12, 7};
+        int[] array = {9, 2, 8, 12, 7};
+        String[] itemArray = {"apples", "banana", "grapes"};
 
-//        reverseStringWithStringBuilderLoop();
+        reverseStringWithStringBuilderLoop();
 
-//        reverseString();
+        reverseString();
 
-//        reverseWithStringBuilderMethod();
+        reverseWithStringBuilderMethod();
 
-//        insertionSort(array);
+        insertionSort(array);
 
-//        selectionSort(6);
+        selectionSort(6);
 
-//        palindrome("NeveroddorEVen");
+        palindrome("NeveroddorEVen");
 
-//        addObjectsIntoArrayList();
+        addObjectsIntoArrayList();
 
-//        exceptionsOutOfString();
+        exceptionsOutOfString();
 
-//        vowelsOrConsonants("I aM a HaPpy mOuse");
+        vowelsOrConsonants("I aM a HaPpy mOuse");
 
-//        isItemInArray()
+        isItemInArray("grapes", itemArray);
 
-//        System.out.println(returnStringByDivisible(32));
+        System.out.println(returnStringByDivisible(32));
 
-//        fizzBuzz();
+        fizzBuzz();
 
         isArmstrong(3717);
 
+        validateIpWithRegex("0.12.123.234");
+
+        validateIPEasyWay("0.12.123.234");
+
+        findTheNumber(1);
+
+        oddNumbers(11, 20);
+
+
+
     }
+
+
 
 
 

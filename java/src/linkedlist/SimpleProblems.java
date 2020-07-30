@@ -262,7 +262,81 @@ public class SimpleProblems {
         }
     }
 
+    public static boolean validateIpWithRegex(String ip) {
 
+        String ipRegex = "(([0-9]|" +
+                "[1-9][0-9]|" +
+                "1[0-9][0-9]|" +
+                "2[0-4][0-9]|" +
+                "25[0-5])" +
+                "\\.)" +
+                "{3}" +
+                "([0-9]|" +
+                "[1-9][0-9]|" +
+                "1[0-9][0-9]|" +
+                "2[0-4][0-9]|" +
+                "25[0-5])";
+
+        Pattern pattern = Pattern.compile(ipRegex);
+        Matcher matcher = pattern.matcher(ip);
+
+        System.out.println(matcher.matches());
+        return matcher.matches();
+    }
+
+    public static boolean validateIPEasyWay(String ip) {
+
+        String[] ipArray = ip.split("\\.");
+
+        for (String s : ipArray) {
+            if (s.length() > 3) {
+                return false;
+            }
+            try {
+                if (Integer.parseInt(s) > 255) {
+                    return false;
+                }
+            } catch (NumberFormatException e) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static String findTheNumber(int n) {
+        String result = "";
+
+        List<Integer> numList = new ArrayList<>();
+        numList.add(5);
+        numList.add(1);
+        numList.add(2);
+        numList.add(3);
+        numList.add(4);
+        numList.add(5);
+        numList.add(1);
+
+        for (Integer i : numList) {
+            if (i == n) {
+                result = "YES";
+                break;
+            }else result  = "NO";
+        }
+        return result;
+    }
+
+    public static List<Integer> oddNumbers(int l, int r) {
+        List<Integer> oddNumList = new ArrayList<>();
+
+        for (int i = l; i <= r; i++) {
+            if (i % 2 != 0) {
+                oddNumList.add(i);
+            }
+        }
+        System.out.println(oddNumList);
+        return oddNumList;
+
+    }
 
 
 
