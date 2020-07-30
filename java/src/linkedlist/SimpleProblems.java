@@ -5,6 +5,8 @@ import abstracts.employees.myEmployees.Deepika;
 import abstracts.employees.myEmployees.Gio;
 import abstracts.employees.myEmployees.Kranthi;
 import abstracts.employees.myEmployees.Latika;
+import com.sun.jmx.snmp.SnmpNull;
+import netscape.javascript.JSUtil;
 
 import java.util.*;
 import java.util.regex.Matcher;
@@ -200,16 +202,6 @@ public class SimpleProblems {
         return "This sentence has " + vowelsCount + " vowels and " + consonantsCount + " consonants";
     }
 
-
-
-    public boolean validateIP(String ip) {
-
-        String ipRegex = "\\d+\\.\\d+\\.\\d+\\.\\d+";
-
-
-        return true;
-    }
-
     public static boolean isItemInArray(String item, String[] itemArray) {
         for (String i : itemArray) {
             if (i.equalsIgnoreCase(item)) {
@@ -218,6 +210,58 @@ public class SimpleProblems {
         }
         return false;
     }
+
+
+    public static String returnStringByDivisible(int input) {
+        String myString = "ANIMAL";
+        String  output = "";
+
+        if (input % 32 == 0){
+            output = myString;
+        } else if (input % 16 == 0) {
+            output = myString.substring(0,4);
+        } else if (input % 8 == 0) {
+            output =  myString.substring(0, 2);
+        }
+        return output;
+    }
+
+    public static void fizzBuzz() {
+        for (int i = 1; i <= 50; i++) {
+            if (i % (3*5) == 0) {
+                System.out.println("FizzBuzz");
+            } else if (i % 5 == 0) {
+                System.out.println("Buzz");
+            } else if (i % 3 == 0) {
+                System.out.println("Fizz");
+            }else System.out.println(i);
+        }
+    }
+
+    public static void isArmstrong(int number) {
+        String numString = Integer.toString(number);
+        System.out.println(numString);
+        if (numString.length() < 3) {
+            System.out.println("number is smaller that  3 digits");
+        }
+        else  {
+            List<Integer> numList =  new ArrayList<>();
+            for (int i = 0; i < numString.length(); i++) {
+                numList.add(Integer.parseInt(numString.substring(i, i+1)));
+            }
+
+            int total = 0;
+            for (int i : numList) {
+                total += Math.pow(i, 3);
+
+            }
+            System.out.println(total);
+            if (total == number){
+                System.out.println(number + " is an Armstrong number");
+            }else System.out.println(number + " is NOT an Armstrong number");
+        }
+    }
+
 
 
 

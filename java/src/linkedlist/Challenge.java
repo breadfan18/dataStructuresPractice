@@ -53,15 +53,17 @@ public class Challenge extends SimpleProblems{
 
 //        addObjectsIntoArrayList();
 
-
-        exceptionsOutOfString();
+//        exceptionsOutOfString();
 
 //        vowelsOrConsonants("I aM a HaPpy mOuse");
 
 //        isItemInArray()
 
+//        System.out.println(returnStringByDivisible(32));
 
+//        fizzBuzz();
 
+        isArmstrong(3717);
 
     }
 
