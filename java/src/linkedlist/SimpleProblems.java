@@ -88,13 +88,13 @@ public class SimpleProblems {
 
     public static int[] insertionSort(int[] list) {
 
-        int j, element, temp;
+        int j, key, temp;
 
         for (int i = 1; i < list.length; i++) {
-            element = list[i];
+            key = list[i];
             j = i-1;
 
-            while (j >=0 && element < list[j]) {
+            while (j >=0 && key < list[j]) {
                 temp = list[j];
                 list[j] = list[j+1];
                 list[j+1] = temp;
@@ -262,7 +262,7 @@ public class SimpleProblems {
         }
     }
 
-    public static boolean validateIpWithRegex(String ip) {
+    public static boolean validateIpWithRegex(String input) {
 
         String ipRegex = "(([0-9]|" +
                 "[1-9][0-9]|" +
@@ -278,7 +278,7 @@ public class SimpleProblems {
                 "25[0-5])";
 
         Pattern pattern = Pattern.compile(ipRegex);
-        Matcher matcher = pattern.matcher(ip);
+        Matcher matcher = pattern.matcher(input);
 
         System.out.println(matcher.matches());
         return matcher.matches();
@@ -337,6 +337,27 @@ public class SimpleProblems {
         return oddNumList;
 
     }
+
+    public static void countPairsOfSumLessThanX(int[] arr,  int n, int x) {
+
+        int l = 0;
+        int r = n-1;
+        int result = 0;
+
+        while (l < r) {
+
+            if (arr[l] + arr[r] < x) {
+                result  += (r-l);
+                l++;
+            }
+
+            else r--;
+
+        }
+        System.out.println(result);
+    }
+
+
 
 
 

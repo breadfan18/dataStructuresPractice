@@ -74,6 +74,8 @@ public class Challenge extends SimpleProblems{
 
         oddNumbers(11, 20);
 
+        countPairsOfSumLessThanX(array, array.length, 7);
+
 
 
     }
