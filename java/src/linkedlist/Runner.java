@@ -22,9 +22,6 @@ public class Runner {
         String test = "del";
         System.out.println(google());
 
-
-
-
     }
 
     public static Character google() {
