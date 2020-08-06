@@ -20,7 +20,8 @@ public class Runner {
 //        System.out.println(newString);
 
         String test = "del";
-        System.out.println(google());
+
+        palindrome("poopoop");
 
     }
 
@@ -32,6 +33,19 @@ public class Runner {
 
 
         return null;
+    }
+
+    public static void palindrome(String input) {
+        String reversed = "";
+
+        for (int i = input.length()-1; i >= 0; i--) {
+            reversed = reversed + input.charAt(i);
+        }
+
+        if (input.equalsIgnoreCase(reversed)) {
+            System.out.println("Palindrome");
+        }else System.out.println("Not Palindrome");
+
     }
 }
 
