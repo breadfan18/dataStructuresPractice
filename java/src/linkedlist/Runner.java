@@ -1,16 +1,7 @@
 package linkedlist;
 
-import com.sun.media.sound.RIFFInvalidDataException;
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-import sun.plugin2.ipc.windows.WindowsIPCFactory;
-
-import javax.print.attribute.standard.Finishings;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class Runner {
+
 
     public static void main(String[] args) {
 
@@ -21,7 +12,8 @@ public class Runner {
 
         String test = "del";
 
-        palindrome("poopoop");
+
+         selSort();
 
     }
 
@@ -35,16 +27,26 @@ public class Runner {
         return null;
     }
 
-    public static void palindrome(String input) {
-        String reversed = "";
+    public static void selSort() {
+        int[] array = {9, 2, 8, 12, 7};
 
-        for (int i = input.length()-1; i >= 0; i--) {
-            reversed = reversed + input.charAt(i);
+        int minIndex, temp;
+
+        for (int i = 0; i <= array.length; i++) {
+            minIndex = i;
+            for (int j = i+1; j < array.length ; j++) {
+                if (array[j] < array[minIndex]) {
+                    minIndex  =  j;
+                }
+            }
+            temp = array[minIndex];
+            array[minIndex] = array[i];
+            array[i] = temp;
         }
 
-        if (input.equalsIgnoreCase(reversed)) {
-            System.out.println("Palindrome");
-        }else System.out.println("Not Palindrome");
+        for (int i : array) {
+            System.out.println(i);
+        }
 
     }
 }
