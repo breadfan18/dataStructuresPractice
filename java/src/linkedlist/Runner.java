@@ -19,7 +19,7 @@ public class Runner {
         String test = "del";
 
 
-         practice();
+        System.out.println(practice());
 
     }
 
@@ -33,8 +33,21 @@ public class Runner {
         return null;
     }
 
-    public static void practice() {
+    public static boolean practice() {
+        String ipAddress = "0.12.123.2555";
 
+        String[] breakdown = ipAddress.split("\\.");
+
+        for (String s : breakdown) {
+            int number = Integer.parseInt(s);
+            if (s.length() > 3) {
+                return false;
+            }
+            else if (number > 255) {
+               return false;
+            }
+        }
+        return true;
     }
 }
 
