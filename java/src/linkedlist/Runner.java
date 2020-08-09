@@ -1,5 +1,6 @@
 package linkedlist;
 
+import com.sun.xml.internal.fastinfoset.util.StringIntMap;
 import com.sun.xml.internal.ws.addressing.WsaTubeHelperImpl;
 
 import java.util.*;
@@ -18,8 +19,10 @@ public class Runner {
 
         String test = "del";
 
+        System.out.println(SimpleProblems.vowelsOrConsonants("I aM a HaPpy mOuse"));
 
-        System.out.println(practice());
+
+        practice();
 
     }
 
@@ -33,21 +36,30 @@ public class Runner {
         return null;
     }
 
-    public static boolean practice() {
-        String ipAddress = "0.12.123.2555";
+    public static void practice() {
+        char[] vowels = {'a', 'e', 'i', 'o', 'u', 'y'};
 
-        String[] breakdown = ipAddress.split("\\.");
+        String input = "   I aM a HaPpy mOuse  ";
 
-        for (String s : breakdown) {
-            int number = Integer.parseInt(s);
-            if (s.length() > 3) {
-                return false;
-            }
-            else if (number > 255) {
-               return false;
+        String trimmed = input.trim().replaceAll(" ", "").toLowerCase();
+
+        int numberOfVowels = 0;
+        int numberOfConsonants = 0;
+
+        for (int i = 0; i < trimmed.length(); i++) {
+            char currentChar = trimmed.charAt(i);
+
+            for (int j = 0; j < vowels.length; j++) {
+                if(currentChar == vowels[j]){
+                    numberOfVowels++;
+                }
             }
         }
-        return true;
+
+        numberOfConsonants = trimmed.length()-numberOfVowels;
+
+        System.out.println(numberOfVowels);
+        System.out.println(numberOfConsonants);
     }
 }
 
