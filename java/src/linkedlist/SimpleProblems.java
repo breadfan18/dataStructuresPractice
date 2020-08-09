@@ -214,7 +214,7 @@ public class SimpleProblems {
 
     public static String returnStringByDivisible(int input) {
         String myString = "ANIMAL";
-        String  output = "";
+        String output = "";
 
         if (input % 32 == 0){
             output = myString;
