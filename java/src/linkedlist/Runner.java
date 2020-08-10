@@ -33,9 +33,9 @@ public class Runner {
 
         String testString = "Lorem Ipsum!! is simply, dummy, text lorem the but, text! are of! was.";
 
-        String myRegex = "[^a-zA-Z0-9 ]";
+        String myRegex = "[^a-zA-Z ]";
 
-        String trimmed = testString.trim().toLowerCase().replaceAll(myRegex, "");
+        String trimmed = testString1.trim().toLowerCase().replaceAll(myRegex, "");
 
         String[] words = trimmed.split(" ");
 
@@ -54,10 +54,14 @@ public class Runner {
 
         int max  = 0;
         String maxWord = "";
+        for (String wordd : myHash.keySet()) {
+            if (myHash.get(wordd) > max) {
+                max = myHash.get(wordd);
+                maxWord = wordd;
+            }
+        }
 
-
-
-
+        System.out.println("Maxword: "  + maxWord + " | Repeated " + max + " times");
 
     }
 
