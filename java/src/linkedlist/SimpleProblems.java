@@ -357,6 +357,37 @@ public class SimpleProblems {
         System.out.println(result);
     }
 
+    public static void mostRepeatingCharacter() {
+        String s1 = "hello kitty my kitty my kitty kat";
+        String s = s1.toLowerCase().trim().replaceAll(" ", "");
+        HashMap<Character, Integer> hashMap = new HashMap<>();
+        for (int i = 0; i < s.length(); i++) {
+            Character currentKey = s.charAt(i);
+            if (hashMap.containsKey(currentKey)) {
+                hashMap.put(currentKey, hashMap.get(currentKey) + 1);
+            }else {
+                hashMap.put(currentKey, 1);
+            }
+        }
+
+        for (Character c : hashMap.keySet()) {
+            System.out.println("Key: " + c  + " | " + "Value: " + hashMap.get(c));
+        }
+
+        int  max = 0;
+        Character mostRepeated = ' ';
+        for (Character key : hashMap.keySet()) {
+            int currentValue = hashMap.get(key);
+            if (currentValue >  max){
+                max = currentValue;
+                mostRepeated = key;
+            }
+        }
+
+        System.out.println("Most repeated char is: \"" + mostRepeated  + "\". It is repeated "  + max  + " times");
+    }
+
+
 
 
 

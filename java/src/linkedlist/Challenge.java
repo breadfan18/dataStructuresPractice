@@ -76,6 +76,8 @@ public class Challenge extends SimpleProblems{
 
         countPairsOfSumLessThanX(array, array.length, 7);
 
+        mostRepeatingCharacter();
+
 
 
     }

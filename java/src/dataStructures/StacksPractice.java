@@ -1,4 +1,4 @@
-package chapter1;
+package dataStructures;
 
 import java.util.Stack;
 
@@ -6,7 +6,7 @@ public class StacksPractice {
 
     //LIFO Model
 
-    //Its on ordered list  of  objects inserted a nd removed  following the LIFO model.  First item inserted into the
+    //Its an ordered list  of  objects inserted and removed  following the LIFO model.  First item inserted into the
     //stack is the last item removed from the stack. Last item  inserted into the  stack is the first item to be removed.
 
     //use .push() insert elements on the top of a stack.
@@ -43,21 +43,36 @@ public class StacksPractice {
 
      private static String reverseStringWithStack(String input) {
         Stack<Character> myStack = new Stack<>();
+//
+//        String reverse = "";
+//
+//        for (int i = 0; i < input.length(); i++) {
+//            myStack.push(input.charAt(i));
+//        }
+//        System.out.println(myStack);
+//        System.out.println(myStack.size());
+//
+//        for (int i = 0; i < input.length(); i++) {
+//            Character myC = myStack.pop();
+//            reverse = reverse + myC;
+//        }
+//
+//        return reverse;
 
-        String reverse = "";
+         String reverse = "";
 
-        for (int i = 0; i < input.length(); i++) {
-            myStack.push(input.charAt(i));
-        }
-        System.out.println(myStack);
-        System.out.println(myStack.size());
+         for (int i = 0; i < input.length(); i++) {
+             myStack.push(input.charAt(i));
+         }
 
-        for (int i = 0; i < input.length(); i++) {
-            Character myC = myStack.pop();
-            reverse = reverse + myC;
-        }
+         System.out.println(myStack);
 
-        return reverse;
+         for (int i = 0; i < input.length(); i++) {
+             char  myc = myStack.pop();
+             reverse += myc;
+         }
+
+         return reverse;
     }
 
 }

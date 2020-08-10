@@ -2,6 +2,7 @@ package linkedlist;
 
 import com.sun.tools.doclets.formats.html.LinkInfoImpl;
 import com.sun.xml.internal.fastinfoset.util.StringIntMap;
+import com.sun.xml.internal.rngom.parse.host.SchemaBuilderHost;
 import com.sun.xml.internal.ws.addressing.WsaTubeHelperImpl;
 
 import java.util.*;
@@ -13,34 +14,7 @@ public class Runner {
 
     public static void main(String[] args) {
 
-//        String s = "str";
-//        Character c = s.charAt(s.length()-1);
-//        String newString = c + s + c;
-//        System.out.println(newString);
-
-        String text = "The giant panda has an insatiable appetite " +
-                "for bamboo. A typical animal eats half the day—a " +
-                "full 12 out of every 24 hours—and relieves itself " +
-                "dozens of times a day. It takes 28 pounds of " +
-                "bamboo to satisfy a giant panda's daily dietary " +
-                "needs. Pandas will sometimes eat birds or rodents" +
-                " as well.";
-
-        //How many sentences
-        String[] sentences = text.split("\\.");
-        System.out.println(sentences.length);
-
-        for (String sentence : sentences) {
-            System.out.println(sentence);
-        }
-
-        //How many wordsw
-        String[] words = text.replaceAll("\\.", "").split(" ");
-        System.out.println(words.length);
-
-
-
-
+        practice();
 
     }
 
@@ -55,9 +29,48 @@ public class Runner {
     }
 
     public static void practice() {
+        String testString1 = "Lorem Ipsum!! is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+
+        String testString = "Lorem Ipsum!! is simply, dummy, text lorem the but, text! are of! was.";
+
+        String myRegex = "[^a-zA-Z0-9 ]";
+
+        String trimmed = testString.trim().toLowerCase().replaceAll(myRegex, "");
+
+        String[] words = trimmed.split(" ");
+
+        HashMap<String, Integer> myHash = new HashMap<>();
+
+        for (int i = 0; i < words.length; i++) {
+            String currentWord = words[i];
+            if (!isCommon(currentWord) && myHash.containsKey(currentWord)) {
+                myHash.put(currentWord, myHash.get(currentWord) + 1);
+            }else if (!isCommon(currentWord)){myHash.put(currentWord, 1);}
+        }
+
+        for (String word : myHash.keySet()) {
+            System.out.println("Word: " + word + " | Count: " + myHash.get(word));
+        }
+
+        int max  = 0;
+        String maxWord = "";
 
 
 
+
+
+    }
+
+    public static boolean isCommon(String word) {
+        String[] commonWords = {"the", "a", "or", "an", "it", "and", "but", "is", "are", "of", "on", "to", "was", "were", "in", "that", "i", "your", "his", "their", "her", "you", "me", "all"};
+
+        for (String commonWord : commonWords) {
+            if (word.equalsIgnoreCase(commonWord)){
+                return true;
+            }
+
+        }
+        return false;
     }
 }
 

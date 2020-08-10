@@ -1,17 +1,17 @@
-package chapter1;
+package dataStructures;
 
 import java.util.HashMap;
 import java.util.Set;
 
 public class HashMapPractice {
 
-    //uses key  value  pairs and hashing function to store  and organnize data
+    //uses key  value  pairs and hashing function to store  and organize data
 
     //A hashing function maps a key or object to a specific hash
 
     //This hash determines where  the value is stored
 
-    //hash collision - whhen same key maps to different values
+    //hash collision - when same key maps to different values
 
     public static void main(String[] args) {
         HashMap<String, Integer> wordToNum = new HashMap<>();
