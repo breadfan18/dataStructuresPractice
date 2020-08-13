@@ -388,6 +388,118 @@ public class SimpleProblems {
     }
 
 
+    public static String removeDuplicatesFromString() {
+
+        //given a string, remove the dupes
+
+        //How would you test this code
+            //empty string
+            //only 1 letter
+            //really long string
+            //lots of alpha special characters in the middle of words
+            //odd spacing..multiple spacing
+            //digits in the iddle of  words
+
+        String text = "hello. hi! take care of you and say hello for me!, see you!";
+
+        String regex = "[^a-zA-Z ]";
+
+        String trimmed = text.trim().toLowerCase().replaceAll(regex, "").replaceAll("  ", " ");
+
+        String[] words = trimmed.split(" ");
+
+        HashMap<String, Integer> myHash = new HashMap<>();
+
+        for (int i = 0; i < words.length; i++) {
+            String currentWord = words[i];
+            if (myHash.containsKey(currentWord)) {
+                myHash.put(currentWord, myHash.get(currentWord) + 1);
+            }else {
+                myHash.put(currentWord, 1);
+            }
+        }
+
+        StringBuilder sb = new StringBuilder();
+
+        for (String key : myHash.keySet()) {
+            System.out.println(key + " | " + myHash.get(key));
+            if (myHash.get(key) == 1) {
+                sb.append(key).append(" ");
+            }
+        }
+
+        return sb.toString();
+    }
+
+    public static char google() {
+
+        //how to test?
+        //make sure to adjust for
+
+        String text = "oggoeagdro loogle";
+
+        String normalized =  text.trim().toLowerCase().replaceAll(" ","");
+
+        char[] textArray = normalized.toCharArray();
+
+        HashMap<Character, Integer> myHash = new HashMap<>();
+
+        char firstRepeating = ' ';
+
+        for (int i = 0; i < textArray.length; i++) {
+            char currentChar = textArray[i];
+
+            if (myHash.containsKey(currentChar)) {
+                myHash.put(currentChar, myHash.get(currentChar) + 1);
+                firstRepeating =  currentChar;
+                break;
+            } else myHash.put(currentChar, 1);
+        }
+        return firstRepeating;
+    }
+
+    public static void findLargestIntFromList(int a, int b,  int c) {
+        List<Integer> myInts = new ArrayList<>();
+
+        myInts.add(a);
+        myInts.add(b);
+        myInts.add(c);
+
+        int max = 0;
+
+        for (int i = 0; i < myInts.size(); i++) {
+            int current = myInts.get(i);
+
+            if (current > max){
+                max = current;
+            }
+        }
+        System.out.println(max);
+    }
+
+    public static int findLargestInt(int a, int b,  int c) {
+        int  max;
+
+        if (a > b){
+            max = a;
+        }else {
+            max = b;
+        }
+
+        if (c > max){
+            max = c;
+        }
+
+        return max;
+    }
+
+    public static int findLargestIntWithMath(int a, int b,  int c) {
+        int max = Math.max(Math.max(a, b), c);
+
+        return max;
+    }
+
+
 
 
 
