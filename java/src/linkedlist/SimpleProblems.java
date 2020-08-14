@@ -499,6 +499,26 @@ public class SimpleProblems {
         return max;
     }
 
+    public static int max1020(int a, int b) {
+        //Given 2 positive int values, return the larger value that is in the range 10..20 inclusive,
+        // or return 0 if neither is in that range.
+
+        //First make it so that the bigger value is in a
+        if (a < b) {
+            int temp = a;
+            a = b;
+            b = temp;
+        }
+
+        //Knowing a is bigger, just check a first..if that condition is not met, then check b
+        if (a >= 10 && a <= 20) { return a; }
+
+        if (b >= 10 && b <= 20) { return b; }
+
+        return 0;
+    }
+
+
 
 
 

@@ -15,7 +15,10 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        System.out.println(practice(11, 9));
+
+        System.out.println(practice("Hello"));
+
+
 
 
     }
@@ -30,21 +33,26 @@ public class Runner {
         return null;
     }
 
-    public static int practice(int a, int b) {
-        if ((a >= 10 && a <= 20) || (b >= 10 && b <= 20)) {
-            int max;
-            if (a > b) {
-                max = a;
-            }else max =  b;
-            return max;
+    public static String practice(String str) {
+
+
+        String output = "";
+
+        for(int i = 0; i < str.length(); i = i + 2){
+            output += str.charAt(i);  //Hlo
+
         }
-        return 0;
+
+        return output;
+
     }
 
 
-
-
 }
+
+
+
+
 
 
 
