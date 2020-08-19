@@ -262,6 +262,30 @@ public class SimpleProblems {
         }
     }
 
+    public static void isArmstrongWithStacks() {
+        //Armstrong number  is a number where the same of each number cubed = the number itself
+        int number = 153;
+        int numberCopy = number;
+        int total = 0;
+        Stack<Integer> stack = new Stack<>();
+
+        while (numberCopy > 0){
+            stack.push(numberCopy % 10);
+            numberCopy =  numberCopy / 10;
+        }
+
+        while (!stack.isEmpty()){
+            int i = stack.pop();
+            total += Math.pow(i, 3);
+
+        }
+
+        if (number == total) {
+            System.out.println("Armstrong");
+        }else System.out.println("Not Armstrong");
+
+    }
+
     public static boolean validateIpWithRegex(String input) {
 
         String ipRegex = "(([0-9]|" +

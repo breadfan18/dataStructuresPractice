@@ -17,51 +17,28 @@ public class Runner {
 
     public static void main(String[] args) {
 
-
-//        System.out.println(practice("Hello"));
-
-String test = "Swaroop";
-
-
-
-        System.out.println(practice(new String[]{"sam", "guitar",  "football", "swaroop"}));
-//        swap();
+        practice();
 
     }
 
-    public static Character google() {
-        //Goal is to find the first repeating character!
-        String input = "google";
-        int distance;
-        char finalChar = 0;
 
 
-        return null;
+    public static void practice() {
+
+
+
+
+
     }
 
-    public static String[] practice(String[] strings) {
-        Map<String, Integer> map = new HashMap();
-        String firstChar = "";
-        //First, create a hashMap that stores the firstChar as key, and index position as value
-        //index position will be equal to i in the loop;
-        for (int i = 0; i < strings.length; i++) {
-            String current = strings[i];
-            firstChar = current.substring(0, 1);
-            if (!map.containsKey(firstChar)) {
-                map.put(firstChar, i);
-            } else if (map.containsKey(firstChar)) {
-                String temp = current;
-                current = strings[map.get(firstChar)];
-                strings[map.get(firstChar)] = temp;
-                map.put(firstChar, strings.length);
-            }
-        }
 
 
 
-        System.out.println(Arrays.toString(strings));
-        return strings;
-    }
+
+
+
+
+
 
 
     public static void swap() {

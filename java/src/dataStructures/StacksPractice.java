@@ -43,21 +43,6 @@ public class StacksPractice {
 
      private static String reverseStringWithStack(String input) {
         Stack<Character> myStack = new Stack<>();
-//
-//        String reverse = "";
-//
-//        for (int i = 0; i < input.length(); i++) {
-//            myStack.push(input.charAt(i));
-//        }
-//        System.out.println(myStack);
-//        System.out.println(myStack.size());
-//
-//        for (int i = 0; i < input.length(); i++) {
-//            Character myC = myStack.pop();
-//            reverse = reverse + myC;
-//        }
-//
-//        return reverse;
 
          String reverse = "";
 
