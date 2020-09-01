@@ -15,7 +15,14 @@ import java.util.regex.Pattern;
 public class SimpleProblems {
 
     public static void reverseStringWithStringBuilderLoop(){
-        String name = "swarooop";
+        String name = "swar\noop";
+
+        //Test data
+            //empty string
+            //all kinds of alpha characters  /.@#$%^
+            //escape sequences..like a newline in the middle of the string
+            //test with digits
+            //untrimmed string, with  spaces at the beginning and end
 
         StringBuilder sb = new StringBuilder();
 
@@ -286,6 +293,18 @@ public class SimpleProblems {
 
     }
 
+    public static List<Integer> splittingInts(int number){
+        List<Integer> intList = new ArrayList<>();
+
+        while (number >  0){
+            int lastDigit = number % 10;
+            number = number / 10;
+            intList.add(lastDigit);
+        }
+        return intList;
+    }
+
+
     public static boolean validateIpWithRegex(String input) {
 
         String ipRegex = "(([0-9]|" +
@@ -422,9 +441,10 @@ public class SimpleProblems {
             //really long string
             //lots of alpha special characters in the middle of words
             //odd spacing..multiple spacing
-            //digits in the iddle of  words
+            //digits in the middle of  words
+            //escape sequences in the string \n
 
-        String text = "hello. hi! take care of you and say hello for me!, see you!";
+        String text = "hello. hi! take care of you\n and say hello for me!, see you!";
 
         String regex = "[^a-zA-Z ]";
 

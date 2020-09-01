@@ -6,8 +6,10 @@ public class StacksPractice {
 
     //LIFO Model
 
-    //Its an ordered list  of  objects inserted and removed  following the LIFO model.  First item inserted into the
-    //stack is the last item removed from the stack. Last item  inserted into the  stack is the first item to be removed.
+    //Its an ordered list  of  objects inserted and removed  following the LIFO model.  First item inserted
+    // into the
+    //stack is the last item removed from the stack. Last item  inserted into the  stack is the first item to
+    // be removed.
 
     //use .push() insert elements on the top of a stack.
 
