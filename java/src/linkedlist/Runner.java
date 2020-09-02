@@ -24,6 +24,10 @@ public class Runner {
 
 
     public static void practice() {
+        String a = "test";
+        String b = "class";
+
+        System.out.println(b.substring(1, b.length()-1));
 
     }
 
