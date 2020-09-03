@@ -24,10 +24,11 @@ public class Runner {
 
 
     public static void practice() {
-        String a = "test";
+        String a = "tttewt";
         String b = "class";
 
-        System.out.println(b.substring(1, b.length()-1));
+        int midIndex= a.length()/2;
+        System.out.println(a.substring(midIndex-1, midIndex+1));
 
     }
 
