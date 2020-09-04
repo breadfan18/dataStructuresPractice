@@ -17,18 +17,19 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        practice();
+        System.out.println(practice());
 
     }
 
 
 
-    public static void practice() {
-        String a = "tttewt";
-        String b = "class";
+    public static boolean practice() {
+        String str = "ba";
 
-        int midIndex= a.length()/2;
-        System.out.println(a.substring(midIndex-1, midIndex+1));
+        if (str.substring(0, 3).equals("bad") || str.substring(1, 4).equals("bad")) {
+            return true;
+        }
+        return false;
 
     }
 
