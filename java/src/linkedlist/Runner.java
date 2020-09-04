@@ -1,17 +1,5 @@
 package linkedlist;
 
-import com.sun.tools.doclets.formats.html.LinkInfoImpl;
-import com.sun.tools.javac.util.ArrayUtils;
-import com.sun.xml.internal.bind.v2.model.core.EnumLeafInfo;
-import com.sun.xml.internal.bind.v2.model.core.MaybeElement;
-import com.sun.xml.internal.fastinfoset.util.StringIntMap;
-import com.sun.xml.internal.rngom.parse.host.SchemaBuilderHost;
-import com.sun.xml.internal.ws.addressing.WsaTubeHelperImpl;
-
-import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class Runner {
 
 
@@ -24,13 +12,14 @@ public class Runner {
 
 
     public static boolean practice() {
-        String str = "ba";
-
-        if (str.substring(0, 3).equals("bad") || str.substring(1, 4).equals("bad")) {
+        String str = "bad";
+        if(str.length() >=3 && str.substring(0,3).equals("bad")){
+            return true;
+        }
+        if(str.length() >=4 && str.substring(1,4).equals("bad")){
             return true;
         }
         return false;
-
     }
 
 
