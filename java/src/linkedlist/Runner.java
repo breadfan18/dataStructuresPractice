@@ -18,6 +18,8 @@ public class Runner {
         }
         if(str.length() >=4 && str.substring(1,4).equals("bad")){
             return true;
+
+
         }
         return false;
     }
