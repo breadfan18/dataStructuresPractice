@@ -1,31 +1,25 @@
 package linkedlist;
 
+import com.sun.media.sound.RIFFInvalidDataException;
+
+import java.util.function.DoubleBinaryOperator;
+
 public class Runner {
 
 
     public static void main(String[] args) {
 
-        System.out.println(practice());
+        System.out.println(practice("broopbr"));
+
 
     }
 
 
 
-    public static String practice() {
-        String a = "abc";
-        String b = "";
+    public static String practice(String str) {
 
-        String output;
 
-        if (a.length() == 0 || b.length() == 0) {
-            output = a.concat(b);
-        }
-        else if (a.charAt(a.length() - 1) == b.charAt(0)) {
-            String aShortened = a.substring(0, a.length() - 1);
-            output = aShortened.concat(b);
-        }else output = a.concat(b);
-
-      return output;
+        return  "";
     }
 
 
