@@ -11,17 +11,21 @@ public class Runner {
 
 
 
-    public static boolean practice() {
-        String str = "bad";
-        if(str.length() >=3 && str.substring(0,3).equals("bad")){
-            return true;
-        }
-        if(str.length() >=4 && str.substring(1,4).equals("bad")){
-            return true;
+    public static String practice() {
+        String a = "abc";
+        String b = "";
 
+        String output;
 
+        if (a.length() == 0 || b.length() == 0) {
+            output = a.concat(b);
         }
-        return false;
+        else if (a.charAt(a.length() - 1) == b.charAt(0)) {
+            String aShortened = a.substring(0, a.length() - 1);
+            output = aShortened.concat(b);
+        }else output = a.concat(b);
+
+      return output;
     }
 
 
