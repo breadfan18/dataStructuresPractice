@@ -9,20 +9,17 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        System.out.println(practice("broopbr"));
-
-
+        System.out.println(practice(new int[]{2, 5, 6}));
     }
 
 
 
-    public static String practice(String str) {
+    public static boolean practice(int[] nums) {
+        if (nums[0] == 6 || nums[nums.length - 1] == 6) {
+            return true;
+        }
 
-
-
-
-
-        return  "";
+        return  false;
     }
 
 
