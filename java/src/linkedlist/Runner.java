@@ -20,7 +20,18 @@ public class Runner {
 
 
     public static int[] practice(int[] nums) {
+        //what is asked?
+            //compare first and last element of array and set a max value based on which is larger
+            //set the rest of the elements as that max value
+        int max = 0;
+        if (nums[0] > nums[2]) {
+            max = nums[0];
+        }
+        else if (nums[0] < nums[2]) {
+            max = nums[2];
+        }
 
+        return new int[]{max, max, max};
     }
 
 
