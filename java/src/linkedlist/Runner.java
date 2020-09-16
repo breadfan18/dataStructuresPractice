@@ -2,6 +2,8 @@ package linkedlist;
 
 import com.sun.media.sound.RIFFInvalidDataException;
 
+import javax.swing.*;
+import java.util.Arrays;
 import java.util.function.DoubleBinaryOperator;
 
 public class Runner {
@@ -9,17 +11,16 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        System.out.println(practice(new int[]{2, 5, 6}));
+        int[] test = {2, 5, 7}; // {5 ,7, 2}
+        int[] test1 = {1, 5, 7, 7, 6};
+
+        System.out.println(Arrays.toString(practice(test)));
     }
 
 
 
-    public static boolean practice(int[] nums) {
-        if (nums[0] == 6 || nums[nums.length - 1] == 6) {
-            return true;
-        }
+    public static int[] practice(int[] nums) {
 
-        return  false;
     }
 
 
