@@ -14,24 +14,21 @@ public class Runner {
         int[] test = {2, 5, 7}; // {5 ,7, 2}
         int[] test1 = {1, 5, 7, 7, 6};
 
-        System.out.println(Arrays.toString(practice(test)));
+        System.out.println(practice(test));
     }
 
 
 
-    public static int[] practice(int[] nums) {
-        //what is asked?
-            //compare first and last element of array and set a max value based on which is larger
-            //set the rest of the elements as that max value
-        int max = 0;
-        if (nums[0] > nums[2]) {
-            max = nums[0];
-        }
-        else if (nums[0] < nums[2]) {
-            max = nums[2];
-        }
+    public static boolean practice(int[] nums) {
+      //so if either the first element or thee second element = 2 or 3, then return true
 
-        return new int[]{max, max, max};
+        if (nums[0] == 2 || nums[0] == 3) {
+            return true;
+        }
+        if (nums[1] == 2 || nums[1] == 3) {
+            return true;
+        }
+        return false;
     }
 
 
