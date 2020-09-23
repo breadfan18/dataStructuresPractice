@@ -2,6 +2,7 @@ package linkedlist;
 
 import com.sun.media.sound.RIFFInvalidDataException;
 
+import javax.security.auth.login.CredentialException;
 import javax.swing.*;
 import java.util.Arrays;
 import java.util.function.DoubleBinaryOperator;
@@ -11,7 +12,7 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        int[] test = {2, 5, 7}; // {5 ,7, 2}
+        int[] test = {4, 5}; // {5 ,7, 2}
         int[] test1 = {1, 5, 7, 7, 6};
 
         System.out.println(practice(test));
@@ -21,11 +22,7 @@ public class Runner {
 
     public static boolean practice(int[] nums) {
       //so if either the first element or thee second element = 2 or 3, then return true
-
-        if (nums[0] == 2 || nums[0] == 3) {
-            return true;
-        }
-        if (nums[1] == 2 || nums[1] == 3) {
+        if (nums[0] != 2 && nums[1] != 2 && nums[0] != 3 && nums[1] != 3) {
             return true;
         }
         return false;
