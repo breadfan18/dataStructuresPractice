@@ -12,7 +12,7 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        int[] test = {4,5,6}; // {5 ,7, 2}
+        int[] test = {2, 3, 5}; // {5 ,7, 2}
         int[] test1 = {1, 5, 7, 7, 6};
 
         System.out.println(Arrays.toString(practice(test)));
@@ -21,17 +21,18 @@ public class Runner {
 
 
     public static int[] practice(int[] nums) {
-      //get length of the array
-        //int number of elements to add = length -1.
+        //array  lengthh is  3, so loop 3 times,  check  each  time if  element  is 2
+        //if  yes, chheck  is next  eelemeent is 3
+        //if  yes, seet next eleement to 0
 
-        int numsLength = nums.length;
-        int lengthOfNewArray = numsLength*2;
-        int lastElementInOriginalArray = nums[numsLength - 1];
-        int[] newNums = new int[lengthOfNewArray];
-
-        newNums[lengthOfNewArray-1] = lastElementInOriginalArray;
-
-        return newNums;
+        for (int i = 0; i < 3; i++) {
+            if (nums[i] == 2) {
+                if (nums[i + 1] == 3) {
+                    nums[i + 1] = 0;
+                }
+            }
+        }
+        return nums;
     }
 
 
