@@ -12,25 +12,23 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        int[] test = {1, 3, 5}; // {5 ,7, 2}
-        int[] test1 = {1, 5, 7, 7, 6};
+        int[] test = {1, 3}; // {5 ,7, 2}
+        int[] test1 = {7, 6};
 
-        System.out.println(practice(test,  test1));
+        System.out.println(Arrays.toString(practice(test, test1)));
     }
 
 
 
-    public static int practice(int[] a, int[] b) {
-        int count = 0;
+    public static int[] practice(int[] a, int[] b) {
+        int[] nnn = new int[4];
+        nnn[0] = a[0];
+        nnn[1] = a[1];
+        nnn[2] = b[0];
+        nnn[3] = b[1];
 
-        if (a.length > 0 && a[0] == 1) {
-            count++;
-        }
-        if (b.length > 0 && b[0] == 1) {
-            count++;
-        }
+        return nnn;
 
-        return count;
     }
 
 
