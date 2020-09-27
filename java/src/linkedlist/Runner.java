@@ -12,27 +12,25 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        int[] test = {2, 3, 5}; // {5 ,7, 2}
+        int[] test = {1, 3, 5}; // {5 ,7, 2}
         int[] test1 = {1, 5, 7, 7, 6};
 
-        System.out.println(Arrays.toString(practice(test)));
+        System.out.println(practice(test,  test1));
     }
 
 
 
-    public static int[] practice(int[] nums) {
-        //array  lengthh is  3, so loop 3 times,  check  each  time if  element  is 2
-        //if  yes, chheck  is next  eelemeent is 3
-        //if  yes, seet next eleement to 0
+    public static int practice(int[] a, int[] b) {
+        int count = 0;
 
-        for (int i = 0; i < 3; i++) {
-            if (nums[i] == 2) {
-                if (nums[i + 1] == 3) {
-                    nums[i + 1] = 0;
-                }
-            }
+        if (a.length > 0 && a[0] == 1) {
+            count++;
         }
-        return nums;
+        if (b.length > 0 && b[0] == 1) {
+            count++;
+        }
+
+        return count;
     }
 
 
