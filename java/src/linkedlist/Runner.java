@@ -12,20 +12,21 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        int[] test = {1, 3, 5, 7}; // {5 ,7, 2}
+        int[] test = {1, 3, 5, 7, 9}; // {5 ,7, 2}
         int[] test1 = {7, 6};
 
-        System.out.println(Arrays.toString(practice(test)));
+        System.out.println(practice(test));
     }
 
 
 
-    public static int[] practice(int[] nums) {
-        int temp = nums[0];
-        nums[0] = nums[nums.length - 1];
-        nums[nums.length-1] = temp;
+    public static int practice(int[] nums) {
+        int middle  = nums.length/2;
 
-        return nums;
+        int max = Math.max(nums[0], Math.max(nums[middle], nums[nums.length - 1]));
+
+        return max;
+
 
     }
 
