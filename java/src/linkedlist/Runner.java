@@ -12,7 +12,7 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        int[] test = {1, 3, 5, 7, 9}; // {5 ,7, 2}
+        int[] test = {2, 1, 3, 7, 9}; // {5 ,7, 2}
         int[] test1 = {7, 6};
 
         System.out.println(practice(test));
@@ -20,13 +20,23 @@ public class Runner {
 
 
 
-    public static int practice(int[] nums) {
-        int middle  = nums.length/2;
+    public static boolean practice(int[] nums) {
+        //need to  check the length of  the array,
+        //if less than 2, return  false
+        //if less than oro equal to 3, check if 1 = 1 and 2 = 3
+        //if greater than 3, if first element is 1
 
-        int max = Math.max(nums[0], Math.max(nums[middle], nums[nums.length - 1]));
+        int length = nums.length;
 
-        return max;
+        if (length < 2) {
+            return false;
+        } else if ((nums[0] == 1 && nums[1] == 3) || (nums[nums.length-2] == 1 && nums[nums.length-1] == 3)   ) {
+            return  true;
+        } else if (nums[1] == 1 && nums[2] == 3) {
+            return true;
+        }
 
+        return false;
 
     }
 
