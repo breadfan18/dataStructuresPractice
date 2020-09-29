@@ -1,6 +1,7 @@
 package linkedlist;
 
 import com.sun.media.sound.RIFFInvalidDataException;
+import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
 
 import javax.security.auth.login.CredentialException;
 import javax.swing.*;
@@ -19,23 +20,30 @@ public class Runner {
         int[] test = {1, 3, 7, 9}; // {5 ,7, 2}
         int[] test1 = {};
 
-        System.out.println(practice("abc", "HiABc"));
+        System.out.println(practice("xyz"));
     }
 
 
 
-    public static boolean practice(String a, String b) {
-        //Find out which string is longer.
-        //Check if the shorter string is equal to the ending substring of the longer string.
-        //how to find which one is longer?
+    public static boolean practice(String str) {
+        String regex = "[^.]xyz";
 
-        int difference = Math.abs(a.length() - b.length());
+        for (int i = 0; i <= str.length()-3; i++) {
+            if (i == 0) {
+                String current = str.substring(0, 3);
+                System.out.println(current);
+                if (current.equalsIgnoreCase("xyz")) {
+                    return true;
+                }
+            }else {
+                String current = str.substring(i, i + 4);
+                if (current.matches(regex)) {
+                    return true;
+                }
+            }
 
-        if (a.length() > b.length()  && a.substring(difference).equalsIgnoreCase(b)) {
-            return true;
-        } else if (b.length() > a.length() && b.substring(difference).equalsIgnoreCase(a)) {
-                return true;
         }
+
         return false;
     }
 
