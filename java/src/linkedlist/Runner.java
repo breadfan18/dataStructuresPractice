@@ -19,22 +19,24 @@ public class Runner {
         int[] test = {1, 3, 7, 9}; // {5 ,7, 2}
         int[] test1 = {};
 
-        System.out.println(practice("hihihelhilohihhi"));
+        System.out.println(practice("abc", "HiABc"));
     }
 
 
 
-    public static int practice(String str) {
-        int counter = 0;
+    public static boolean practice(String a, String b) {
+        //Find out which string is longer.
+        //Check if the shorter string is equal to the ending substring of the longer string.
+        //how to find which one is longer?
 
-        for (int i = 0; i < str.length()-1; i++) {
-            String current = str.substring(i, i+2);
-            if (current.equals("hi")) {
-                counter++;
-            }
+        int difference = Math.abs(a.length() - b.length());
+
+        if (a.length() > b.length()  && a.substring(difference).equalsIgnoreCase(b)) {
+            return true;
+        } else if (b.length() > a.length() && b.substring(difference).equalsIgnoreCase(a)) {
+                return true;
         }
-
-        return counter;
+        return false;
     }
 
 
