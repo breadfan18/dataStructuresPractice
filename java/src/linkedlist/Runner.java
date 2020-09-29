@@ -4,8 +4,12 @@ import com.sun.media.sound.RIFFInvalidDataException;
 
 import javax.security.auth.login.CredentialException;
 import javax.swing.*;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.function.DoubleBinaryOperator;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Runner {
 
@@ -15,19 +19,22 @@ public class Runner {
         int[] test = {1, 3, 7, 9}; // {5 ,7, 2}
         int[] test1 = {};
 
-        System.out.println(practice("test"));
+        System.out.println(practice("hihihelhilohihhi"));
     }
 
 
 
-    public static String practice(String str) {
-        char[] mmm = str.toCharArray();
-        String output = "";
+    public static int practice(String str) {
+        int counter = 0;
 
-        for (int i = 0; i < mmm.length; i++) {
-            output = output + mmm[i] + mmm[i];
+        for (int i = 0; i < str.length()-1; i++) {
+            String current = str.substring(i, i+2);
+            if (current.equals("hi")) {
+                counter++;
+            }
         }
-        return output;
+
+        return counter;
     }
 
 
