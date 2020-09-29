@@ -15,25 +15,19 @@ public class Runner {
         int[] test = {1, 3, 7, 9}; // {5 ,7, 2}
         int[] test1 = {};
 
-        System.out.println(Arrays.toString(practice(test, test1)));
+        System.out.println(practice("test"));
     }
 
 
 
-    public static int[] practice(int[] a, int[] b) {
+    public static String practice(String str) {
+        char[] mmm = str.toCharArray();
+        String output = "";
 
-        if (a.length == 0 && b.length == 0) {
-            return a;
+        for (int i = 0; i < mmm.length; i++) {
+            output = output + mmm[i] + mmm[i];
         }
-        if (a.length == 0) {
-            int[] myArr = new int[] {b[0]};
-        }
-        if (b.length == 0) {
-            int[] myArr = new int[] {a[0]};
-        }
-
-        int[] myArr = new int[] {a[0], b[0]};
-        return myArr;
+        return output;
     }
 
 
