@@ -20,21 +20,35 @@ public class Runner {
         int[] test = {1, 3, 7, 9}; // {5 ,7, 2}
         int[] test1 = {};
 
-        System.out.println(practice("bob"));
+        System.out.println(practice("bbb"));
     }
 
 
 
     public static boolean practice(String str) {
-        String regex = "b.b";
+        //find the index of last x, and see if theres a y after that..
+            //how?
+                //loop over string, set index as x is found
+        //if yes, then true, if no then false
+        int lastIndexOfX = 0;
+        int lastIndexOfY = 0;
 
-        for (int i = 0; i < str.length()-2; i++) {
-            String current = str.substring(i, i + 3);
-            if (current.matches(regex)) {
-                return true;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'x') {
+                lastIndexOfX = i;
+            }
+            if (str.charAt(i) == 'y') {
+                lastIndexOfY = i;
             }
         }
-        return false;
+
+        if (lastIndexOfX < lastIndexOfY) {
+            return true;
+        }else return false;
+
+
+
+
     }
 
 
