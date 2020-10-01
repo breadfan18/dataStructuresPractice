@@ -20,31 +20,15 @@ public class Runner {
         int[] test = {1, 3, 7, 9}; // {5 ,7, 2}
         int[] test1 = {};
 
-        System.out.println(practice("xyz"));
+        System.out.println(practice("x.xyz"));
     }
 
 
 
     public static boolean practice(String str) {
-        String regex = "[^.]xyz";
-
-        for (int i = 0; i <= str.length()-3; i++) {
-            if (i == 0) {
-                String current = str.substring(0, 3);
-                System.out.println(current);
-                if (current.equalsIgnoreCase("xyz")) {
-                    return true;
-                }
-            }else {
-                String current = str.substring(i, i + 4);
-                if (current.matches(regex)) {
-                    return true;
-                }
-            }
-
-        }
-
-        return false;
+        String regex = "\\.xyz";
+        str = str.replaceAll(regex, "");
+        return str.contains("xyz");
     }
 
 
