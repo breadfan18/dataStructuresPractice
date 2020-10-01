@@ -20,15 +20,21 @@ public class Runner {
         int[] test = {1, 3, 7, 9}; // {5 ,7, 2}
         int[] test1 = {};
 
-        System.out.println(practice("x.xyz"));
+        System.out.println(practice("bob"));
     }
 
 
 
     public static boolean practice(String str) {
-        String regex = "\\.xyz";
-        str = str.replaceAll(regex, "");
-        return str.contains("xyz");
+        String regex = "b.b";
+
+        for (int i = 0; i < str.length()-2; i++) {
+            String current = str.substring(i, i + 3);
+            if (current.matches(regex)) {
+                return true;
+            }
+        }
+        return false;
     }
 
 
