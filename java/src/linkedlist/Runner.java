@@ -44,11 +44,9 @@ public class Runner {
 
         if (lastIndexOfX < lastIndexOfY) {
             return true;
-        }else return false;
+        }else
 
-
-
-
+            return false;
     }
 
 
