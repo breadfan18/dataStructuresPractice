@@ -20,31 +20,19 @@ public class Runner {
         int[] test = {1, 3, 7, 9}; // {5 ,7, 2}
         int[] test1 = {};
 
-        System.out.println(practice("aaa", "bbbccc"));
+        System.out.println(practice("SwaroopAndAnshu", 5));
     }
 
 
 
-    public static String practice(String a, String b) {
-        //charArray for a
-        //charArray for b
-        //find out which string is longer, iterate over the length of the longer  one.
-        //
-        char[] aChars = a.toCharArray();
-        char[] bChars = b.toCharArray();
+    public static String practice(String str, int n) {
+        String lengthofN = str.substring(str.length()-n);
         StringBuilder sb = new StringBuilder();
 
-        int max = Math.max(a.length(), b.length());
-
-        for (int i = 0; i < max; i++) {
-            if (a.length() > i) {
-                sb.append(aChars[i]);
-            }
-            if (b.length()  > i){
-                sb.append(bChars[i]);
-            }
-
+        for (int i = 0; i < n; i++) {
+            sb.append(lengthofN);
         }
+
         return sb.toString();
     }
 
