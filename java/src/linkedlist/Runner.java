@@ -20,33 +20,32 @@ public class Runner {
         int[] test = {1, 3, 7, 9}; // {5 ,7, 2}
         int[] test1 = {};
 
-        System.out.println(practice("bbb"));
+        System.out.println(practice("aaa", "bbbccc"));
     }
 
 
 
-    public static boolean practice(String str) {
-        //find the index of last x, and see if theres a y after that..
-            //how?
-                //loop over string, set index as x is found
-        //if yes, then true, if no then false
-        int lastIndexOfX = 0;
-        int lastIndexOfY = 0;
+    public static String practice(String a, String b) {
+        //charArray for a
+        //charArray for b
+        //find out which string is longer, iterate over the length of the longer  one.
+        //
+        char[] aChars = a.toCharArray();
+        char[] bChars = b.toCharArray();
+        StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == 'x') {
-                lastIndexOfX = i;
+        int max = Math.max(a.length(), b.length());
+
+        for (int i = 0; i < max; i++) {
+            if (a.length() > i) {
+                sb.append(aChars[i]);
             }
-            if (str.charAt(i) == 'y') {
-                lastIndexOfY = i;
+            if (b.length()  > i){
+                sb.append(bChars[i]);
             }
+
         }
-
-        if (lastIndexOfX < lastIndexOfY) {
-            return true;
-        }else
-
-            return false;
+        return sb.toString();
     }
 
 
