@@ -20,21 +20,16 @@ public class Runner {
         int[] test = {1, 3, 7, 9}; // {5 ,7, 2}
         int[] test1 = {};
 
-        System.out.println(practice("Chocolate", "X", 4));
+        System.out.println(practice("abdd", 2));
     }
 
 
 
-    public static String practice(String word, String sep, int count) {
-        StringBuilder sb = new StringBuilder();
+    public static boolean practice(String str, int n) {
+        String prefix = str.substring(0, n);
+        String rest = str.substring(n);
 
-        for (int i = 0; i < count; i++) {
-            sb.append(word);
-            if (i < count - 1) {
-                sb.append(sep);
-            }
-        }
-        return sb.toString();
+        return rest.contains(prefix);
     }
 
 
