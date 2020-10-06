@@ -20,16 +20,14 @@ public class Runner {
         int[] test = {1, 3, 7, 9}; // {5 ,7, 2}
         int[] test1 = {};
 
-        System.out.println(practice("abdd", 2));
+        System.out.println(practice("abdd"));
     }
 
 
 
-    public static boolean practice(String str, int n) {
-        String prefix = str.substring(0, n);
-        String rest = str.substring(n);
+    public static boolean practice(String str) {
 
-        return rest.contains(prefix);
+
     }
 
 
