@@ -8,7 +8,7 @@ public class Runner {
         int[] test = {1, 3, 7, 9}; // {5 ,7, 2}
         int[] test1 = {};
 
-        System.out.println(practice("abxbreadhahabread"));
+        System.out.println(practice("axbreadhahabreadAAA"));
     }
 
 
@@ -19,6 +19,9 @@ public class Runner {
         if (!str.matches(regex)) {
             return "lol";
         }else {
+            String updated = str.substring(str.indexOf("bread"));
+
+
 
         }
 
