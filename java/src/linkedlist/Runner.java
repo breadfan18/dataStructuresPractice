@@ -1,17 +1,5 @@
 package linkedlist;
 
-import com.sun.media.sound.RIFFInvalidDataException;
-import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
-
-import javax.security.auth.login.CredentialException;
-import javax.swing.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.function.DoubleBinaryOperator;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class Runner {
 
 
@@ -20,14 +8,29 @@ public class Runner {
         int[] test = {1, 3, 7, 9}; // {5 ,7, 2}
         int[] test1 = {};
 
-        System.out.println(practice("abdd"));
+        System.out.println(practice("abxbreadhahabread"));
     }
 
 
 
-    public static boolean practice(String str) {
+    public static String practice(String str) {
+        String regex = ".*bread.*bread.*";
 
+        if (!str.matches(regex)) {
+            return "lol";
+        }else {
 
+        }
+
+        return "bread";
+    }
+
+    public static boolean isOdd(int n) {
+        if (n % 2 != 0) {
+            return true;
+        }
+
+        return false;
     }
 
 
