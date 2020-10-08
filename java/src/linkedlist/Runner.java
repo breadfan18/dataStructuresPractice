@@ -1,5 +1,7 @@
 package linkedlist;
 
+import java.util.HashMap;
+
 public class Runner {
 
 
@@ -8,32 +10,35 @@ public class Runner {
         int[] test = {1, 3, 7, 9}; // {5 ,7, 2}
         int[] test1 = {};
 
-        System.out.println(practice("axbreadhahabreadAAA"));
+        System.out.println(practice("axhahaAAAbreadfddfbread"));
     }
 
 
 
     public static String practice(String str) {
-        String regex = ".*bread.*bread.*";
+        HashMap<String, Integer> breadCount = new HashMap<>();
 
-        if (!str.matches(regex)) {
-            return "lol";
+        int count = 0;
+        for (int i = 0; i < str.length() - 4; i++) {
+            String current = str.substring(i, i + 5);
+            if (current.equals("bread")) {
+                count++;
+            }
+        }
+        breadCount.put("bread", count);
+
+        if (count <= 1) {
+            return "";
         }else {
-            String updated = str.substring(str.indexOf("bread"));
+            int indexOfFirstBread = str.indexOf("bread");
+            String updated = str.substring(indexOfFirstBread + 5);
 
+            int indexOfSecondBread = updated.indexOf("bread");
+            System.out.println(indexOfSecondBread);
 
+            return updated.substring(0, indexOfSecondBread);
 
         }
-
-        return "bread";
-    }
-
-    public static boolean isOdd(int n) {
-        if (n % 2 != 0) {
-            return true;
-        }
-
-        return false;
     }
 
 
