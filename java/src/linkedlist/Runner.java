@@ -1,5 +1,7 @@
 package linkedlist;
 
+import com.sun.media.sound.RIFFInvalidDataException;
+
 import java.util.HashMap;
 
 public class Runner {
@@ -10,35 +12,20 @@ public class Runner {
         int[] test = {1, 3, 7, 9}; // {5 ,7, 2}
         int[] test1 = {};
 
-        System.out.println(practice("axhahaAAAbreadfddfbread"));
+        System.out.println(practice(""));
     }
 
 
 
     public static String practice(String str) {
-        HashMap<String, Integer> breadCount = new HashMap<>();
+        int first = str.indexOf("bread");
+        int last = str.lastIndexOf("bread");
 
-        int count = 0;
-        for (int i = 0; i < str.length() - 4; i++) {
-            String current = str.substring(i, i + 5);
-            if (current.equals("bread")) {
-                count++;
-            }
-        }
-        breadCount.put("bread", count);
-
-        if (count <= 1) {
+        if (first == last) {
             return "";
-        }else {
-            int indexOfFirstBread = str.indexOf("bread");
-            String updated = str.substring(indexOfFirstBread + 5);
-
-            int indexOfSecondBread = updated.indexOf("bread");
-            System.out.println(indexOfSecondBread);
-
-            return updated.substring(0, indexOfSecondBread);
-
         }
+
+        return str.substring(first + 5, last);
     }
 
 
