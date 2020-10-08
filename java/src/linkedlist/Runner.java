@@ -12,7 +12,7 @@ public class Runner {
         int[] test = {1, 3, 7, 9}; // {5 ,7, 2}
         int[] test1 = {};
 
-        System.out.println(practice(""));
+        System.out.println(practice("AX_bread_BX_bread_CX"));
     }
 
 
@@ -25,7 +25,7 @@ public class Runner {
             return "";
         }
 
-        return str.substring(first + 5, last);
+        return str.substring(first+5, last);
     }
 
 
