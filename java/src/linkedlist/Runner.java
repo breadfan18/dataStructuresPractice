@@ -21,8 +21,6 @@ public class Runner {
 
 
     public static String practice(String str) {
-        //loop over string
-
         StringBuilder sb = new StringBuilder();
 
         List<String> mList = new ArrayList<>();
