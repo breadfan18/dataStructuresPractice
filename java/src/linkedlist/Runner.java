@@ -2,7 +2,10 @@ package linkedlist;
 
 import com.sun.media.sound.RIFFInvalidDataException;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 public class Runner {
 
@@ -12,24 +15,28 @@ public class Runner {
         int[] test = {1, 3, 7, 9}; // {5 ,7, 2}
         int[] test1 = {};
 
-        System.out.println(practice("abc*ce*f"));
+        System.out.println(practice("abcdefgh"));
     }
 
 
 
-    public static boolean practice(String str) {
-        //first count how many starts in string??
+    public static String practice(String str) {
+        //loop over string
 
-        for (int i = 1; i < str.length()-1; i++) {
+        StringBuilder sb = new StringBuilder();
 
-            if (str.charAt(i) == '*') {
-                if (str.charAt(i - 1) == str.charAt(i + 1)) {
-                    return true;
-                }
-            }
+        List<String> mList = new ArrayList<>();
+
+        for (int i = 0; i < str.length()-2; i+=3) {
+            mList.add(str.substring(i, i + 3));
         }
 
-        return false;
+        for (String s : mList) {
+            String flipped = s.substring(1, 3) + s.charAt(0);
+            sb.append(flipped);
+        }
+
+        return sb.toString();
     }
 
 
