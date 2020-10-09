@@ -25,6 +25,8 @@ public class Runner {
             return "";
         }
 
+
+
         return str.substring(first+5, last);
     }
 
