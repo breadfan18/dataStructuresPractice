@@ -12,22 +12,26 @@ public class Runner {
         int[] test = {1, 3, 7, 9}; // {5 ,7, 2}
         int[] test1 = {};
 
-        System.out.println(practice("AX_bread_BX_bread_CX"));
+        System.out.println(practice("abc*ce*f"));
     }
 
 
 
-    public static String practice(String str) {
-        int first = str.indexOf("bread");
-        int last = str.lastIndexOf("bread");
+    public static boolean practice(String str) {
+        //first count how many starts in string??
 
-        if (first == last) {
-            return "";
+        boolean isIt = false;
+
+        for (int i = 0; i < str.length()-1; i++) {
+            if (i != 0 && str.charAt(i) == '*') {
+                if (str.charAt(i - 1) == str.charAt(i + 1)) {
+                    isIt = true;
+                }
+            }
         }
 
 
-
-        return str.substring(first+5, last);
+        return isIt;
     }
 
 
