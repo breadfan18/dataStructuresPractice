@@ -20,18 +20,16 @@ public class Runner {
     public static boolean practice(String str) {
         //first count how many starts in string??
 
-        boolean isIt = false;
+        for (int i = 1; i < str.length()-1; i++) {
 
-        for (int i = 0; i < str.length()-1; i++) {
-            if (i != 0 && str.charAt(i) == '*') {
+            if (str.charAt(i) == '*') {
                 if (str.charAt(i - 1) == str.charAt(i + 1)) {
-                    isIt = true;
+                    return true;
                 }
             }
         }
 
-
-        return isIt;
+        return false;
     }
 
 
