@@ -12,23 +12,31 @@ public class Runner {
     static int rent = 2_850;
     static int monthlyExpenses_Fixed = 500;
     static int monthlyExpenses_Variable = 3000;
-    static int anshuSalary = 4000;
     static final int mammaBuwaMonthly = 1500;
+    static int anshuSalary = 4000;
 
     public static void main(String[] args) {
-        int numberOfMonthsOut = 6;
 
-
-        int totalExpenses = numberOfMonthsOut * (rent + monthlyExpenses_Fixed + monthlyExpenses_Variable);
-        int totalCashAvailable = numberOfMonthsOut * (anshuSalary + mammaBuwaMonthly);
-
-        System.out.println("Total cash used from Savings: " + (totalExpenses - totalCashAvailable));
+        practice(6, true);
 
     }
 
 
-    public static void practice(int numberOfMonthsOut, boolean onlySwaroop, ) {
+    public static void practice(int numberOfMonthsOut, boolean onlySwaroop) {
+        if (!onlySwaroop) {
+            anshuSalary = 0;
+        }
 
+        System.out.println("Anshu Salary: " + anshuSalary);
+
+        int totalExpenses = numberOfMonthsOut * (rent + monthlyExpenses_Fixed + monthlyExpenses_Variable);
+        System.out.println("Total Home Expenses for " + numberOfMonthsOut + " months: " + totalExpenses);
+        int totalCashAvailable = numberOfMonthsOut * (anshuSalary + mammaBuwaMonthly);
+        System.out.println("Total Cash Supplement " + numberOfMonthsOut + " months: " + totalCashAvailable);
+
+        System.out.println("------------------------------------------");
+
+        System.out.println("Total cash used from Savings: " + (totalExpenses - totalCashAvailable));
     }
 
 
