@@ -9,32 +9,26 @@ import java.util.List;
 
 public class Runner {
 
+    static int rent = 2_850;
+    static int monthlyExpenses_Fixed = 500;
+    static int monthlyExpenses_Variable = 3000;
+    static int anshuSalary = 4000;
+    static final int mammaBuwaMonthly = 1500;
 
     public static void main(String[] args) {
+        int numberOfMonthsOut = 6;
 
-        int[] test = {1, 3, 7, 9}; // {5 ,7, 2}
-        int[] test1 = {};
 
-        System.out.println(practice("abcdefgh"));
+        int totalExpenses = numberOfMonthsOut * (rent + monthlyExpenses_Fixed + monthlyExpenses_Variable);
+        int totalCashAvailable = numberOfMonthsOut * (anshuSalary + mammaBuwaMonthly);
+
+        System.out.println("Total cash used from Savings: " + (totalExpenses - totalCashAvailable));
+
     }
 
 
+    public static void practice(int numberOfMonthsOut, boolean onlySwaroop, ) {
 
-    public static String practice(String str) {
-        StringBuilder sb = new StringBuilder();
-
-        List<String> mList = new ArrayList<>();
-
-        for (int i = 0; i < str.length()-2; i+=3) {
-            mList.add(str.substring(i, i + 3));
-        }
-
-        for (String s : mList) {
-            String flipped = s.substring(1, 3) + s.charAt(0);
-            sb.append(flipped);
-        }
-
-        return sb.toString();
     }
 
 
