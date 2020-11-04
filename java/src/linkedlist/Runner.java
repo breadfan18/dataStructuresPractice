@@ -17,7 +17,8 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        practice(6, true);
+        practice(6, false);
+
 
     }
 
@@ -34,9 +35,10 @@ public class Runner {
         int totalCashAvailable = numberOfMonthsOut * (anshuSalary + mammaBuwaMonthly);
         System.out.println("Total Cash Supplement " + numberOfMonthsOut + " months: " + totalCashAvailable);
 
-        System.out.println("------------------------------------------");
+        System.out.println("************************************************");
 
         System.out.println("Total cash used from Savings: " + (totalExpenses - totalCashAvailable));
+
     }
 
 
