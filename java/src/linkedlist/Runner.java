@@ -28,6 +28,7 @@ public class Runner {
             anshuSalary = 0;
         }
 
+
         System.out.println("Anshu Salary: " + anshuSalary);
 
         int totalExpenses = numberOfMonthsOut * (rent + monthlyExpenses_Fixed + monthlyExpenses_Variable);
