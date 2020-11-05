@@ -1,12 +1,5 @@
 package linkedlist;
 
-import com.sun.media.sound.RIFFInvalidDataException;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-
 public class Runner {
 
     static int rent = 2_850;
@@ -17,13 +10,13 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        practice(6, false);
+        calcSavingsAmountNeeded(6, false);
 
 
     }
 
 
-    public static void practice(int numberOfMonthsOut, boolean onlySwaroop) {
+    public static void calcSavingsAmountNeeded(int numberOfMonthsOut, boolean onlySwaroop) {
         if (!onlySwaroop) {
             anshuSalary = 0;
         }
