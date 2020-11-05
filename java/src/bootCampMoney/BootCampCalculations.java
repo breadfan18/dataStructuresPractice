@@ -9,7 +9,7 @@ public class BootCampCalculations {
     static int monthlyExpenses_Variable = 3000;
     int totalMonthlyExpenses = rent + monthlyExpenses_Fixed + monthlyExpenses_Variable;
 
-    BasePage bp = new BasePage();
+    static BasePage bp = new BasePage();
 
     public static void main(String[] args) {
 
