@@ -1,6 +1,5 @@
 package bootCampMoney;
 
-import java.text.NumberFormat;
 
 public class BootCampCalculations {
 
@@ -9,7 +8,6 @@ public class BootCampCalculations {
     static int monthlyExpenses_Variable = 3000;
     int totalMonthlyExpenses = rent + monthlyExpenses_Fixed + monthlyExpenses_Variable;
 
-    static BasePage bp = new BasePage();
 
     public static void main(String[] args) {
 
@@ -22,6 +20,7 @@ public class BootCampCalculations {
 
 
     public void calcSavingsAmountNeeded() {
+        BasePage bp = new BasePage();
         int swaroopNumberOfMonthsOut = bp.getIntFromScanner("Swaroop out for (Months): ");
         int anshuNumberOfMonthsOut = bp.getIntFromScanner("Anshu out for (Months):  ");
         int anshuMonthlySalary = bp.getIntFromScanner("Anshu Monthly Salary: ");
