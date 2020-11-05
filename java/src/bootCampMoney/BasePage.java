@@ -3,6 +3,7 @@ package bootCampMoney;
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.List;
 import java.util.Scanner;
 
@@ -140,6 +141,10 @@ public class BasePage {
         BigDecimal biggie = new BigDecimal(doubleToString);
         biggie = biggie.setScale(2, BigDecimal.ROUND_HALF_UP);
         return  biggie.doubleValue();
+    }
+
+    public String currencize(double input) {
+        return NumberFormat.getCurrencyInstance().format(input);
     }
 
 

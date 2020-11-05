@@ -7,7 +7,6 @@ public class BootCampCalculations {
     static int rent = 2_850;
     static int monthlyExpenses_Fixed = 500;
     static int monthlyExpenses_Variable = 3000;
-    static final int mammaBuwaMonthly = 1500;
     int totalMonthlyExpenses = rent + monthlyExpenses_Fixed + monthlyExpenses_Variable;
 
     BasePage bp = new BasePage();
@@ -25,15 +24,18 @@ public class BootCampCalculations {
     public void calcSavingsAmountNeeded() {
         int swaroopNumberOfMonthsOut = bp.getIntFromScanner("Swaroop out for (Months): ");
         int anshuNumberOfMonthsOut = bp.getIntFromScanner("Anshu out for (Months):  ");
-
-        int monthsAnshuMakesSalary = swaroopNumberOfMonthsOut - anshuNumberOfMonthsOut;
         int anshuMonthlySalary = bp.getIntFromScanner("Anshu Monthly Salary: ");
+        int monthsAnshuMakesSalary = swaroopNumberOfMonthsOut - anshuNumberOfMonthsOut;
+        int mammaBuwaMonthly = bp.getIntFromScanner("Monthly cash from MammaBuwa Account: ");
 
+        int totalHomeExpensesForThatTime = swaroopNumberOfMonthsOut * totalMonthlyExpenses;
+        int totatMammaBuwaCashForThatTime = swaroopNumberOfMonthsOut * mammaBuwaMonthly;
+        int totalAnshuSalaryInThatTime = (monthsAnshuMakesSalary)*anshuMonthlySalary;
+        int totalCashProceedsInThatTime = totatMammaBuwaCashForThatTime + totalAnshuSalaryInThatTime;
 
+        String totalUsedFromSavings = bp.currencize(totalHomeExpensesForThatTime - totalCashProceedsInThatTime);
 
-
-
-
+        System.out.println("We will need to use " + totalUsedFromSavings + " from our savings account");
 
     }
 
