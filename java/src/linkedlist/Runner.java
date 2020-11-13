@@ -15,6 +15,9 @@ public class Runner {
 
     public static void practice() {
         System.out.println("something something");
+
+
+        
     }
 
 
